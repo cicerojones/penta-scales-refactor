@@ -1,0 +1,151 @@
+#N canvas 370 23 983 834 12;
+#X msg 30 495 240 67 0 107 0 0 14 47 0 67 247;
+#X msg 129 551 240 67 0 107 0 0 15 47 0 66 247;
+#X obj 30 533 list append;
+#X obj 31 567 list;
+#X obj 31 603 midiout 1;
+#X obj 103 466 cyclone/coll;
+#C restore;
+#X obj 30 422 t b b;
+#X obj 30 398 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 85 284 <= recall data from address;
+#X msg 160 338 read;
+#X obj 508 409 cyclone/coll;
+#C restore;
+#X msg 520 369 read;
+#X floatatom 30 274 5 0 127 0 - - -;
+#X obj 30 209 mod 128;
+#X msg 192 369 read ./resources/PRE1-voices.txt;
+#X msg 192 385 read ./resources/PRE2-voices.txt;
+#X msg 112 257 64;
+#X msg 192 402 read ./resources/PRE3-voices.txt;
+#X obj 30 186 cyclone/counter;
+#X obj 115 208 cnv 15 100 40 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 118 211 OPEN SPIGOT!;
+#X msg 616 391 read ./resources/three-coll-tunings.txt;
+#X floatatom 476 203 5 0 0 0 - - -;
+#X obj 535 187 cyclone/coll;
+#C restore;
+#X msg 535 137 read ./resources/ten-scale-names.txt;
+#X msg 535 214 \; scale-name label \$1;
+#X obj 476 180 counter;
+#X obj 444 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 444 61 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 444 82 metro 15000;
+#X obj 476 225 mod 101;
+#X floatatom 476 288 5 0 0 0 - - -;
+#X msg 616 372 read ./resources/8-big.txt;
+#X obj 444 125 t b b;
+#X obj 489 142 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 7 38 avoid sending messages at the same time \, somehow something
+resets the Volume for the Tone Generator to 0 \, as well as all kinds
+of other crazy stuff;
+#X text 770 95 message 75?;
+#X obj 30 371 t b f;
+#X obj 30 346 spigot;
+#X obj 69 327 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 474 459 240 67 0 107 0 0 14 47 0 67 247;
+#X msg 513 514 240 67 0 107 0 0 15 47 0 66 247;
+#X obj 474 481 list append;
+#X obj 475 531 list;
+#X obj 475 567 midiout 1;
+#X obj 474 429 t b b;
+#X obj 474 405 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 476 342 t b f;
+#X obj 476 317 spigot;
+#X obj 515 297 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 152 257 122;
+#X obj 442 170 vradio 15 1 1 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 20 637 cyclone/coll pre2-fave;
+#C restore;
+#X msg 19 660 0 56 \, (smooth saw) \; 1 64 \, (Altair) \; 2 65 \, (Analog)
+\; 3 68 \, (sinepad) \; 4 70 \, (Voxpad) \; 5 73 \, (MovingPad) \;
+6 75 \, (PWM Pad) \; 7 77 \, (ObSoft) \; 8 79 \, (Glasschoir) 9 81
+\, (Stackchoir) \; 10 91 \, (AiryNYlon) \; 11 101 \, (Glacy) \;;
+#X obj 313 627 cyclone/coll pre3-fave;
+#C restore;
+#X msg 313 655 0 55 \, (G-funk) \; 1 60 \, (Sunbeams) \; 2 62 \, (FrozenPad)
+\; 3 63 \, (MICHINOKU) \; 4 71 \, (Gently) \; 5 72 \, (Warming) \;
+6 81 \, (LazySweep) \; 7 103 \, (Siam) \; 8 79 \, (Glasschoir) 9 81
+\, (Stackchoir) \; 10 91 \, (AiryNYlon) \; 11 101 \, (Glacy) \;;
+#X msg 193 424 read ./resources/USER-voices.txt;
+#X msg 194 443 read ./resources/GM-voices.txt;
+#X text 11 107 open a "Motif-player" patch for using auto-play to experiment
+with different waves and tunings;
+#X floatatom 519 48 5 0 0 0 - - -;
+#X obj 30 156 bng 18 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 621 342 read ./resources/10-big.txt;
+#X obj 476 159 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 617 416 read ./resources/a-single-scale.txt;
+#X msg 621 316 read ./resources/12-big.txt;
+#X msg 563 280 read ./resources/double-octave-scales0-999.txt;
+#X connect 0 0 2 0;
+#X connect 1 0 3 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 2 1;
+#X connect 6 0 0 0;
+#X connect 6 1 1 0;
+#X connect 7 0 6 0;
+#X connect 9 0 5 0;
+#X connect 10 0 42 1;
+#X connect 11 0 10 0;
+#X connect 12 0 38 0;
+#X connect 13 0 12 0;
+#X connect 14 0 5 0;
+#X connect 15 0 5 0;
+#X connect 16 0 12 0;
+#X connect 17 0 5 0;
+#X connect 18 0 13 0;
+#X connect 21 0 10 0;
+#X connect 22 0 30 0;
+#X connect 23 0 25 0;
+#X connect 24 0 23 0;
+#X connect 26 0 22 0;
+#X connect 27 0 33 0;
+#X connect 28 0 29 0;
+#X connect 29 0 27 0;
+#X connect 30 0 31 0;
+#X connect 31 0 23 0;
+#X connect 31 0 48 0;
+#X connect 32 0 10 0;
+#X connect 33 0 18 0;
+#X connect 33 1 62 0;
+#X connect 34 0 26 1;
+#X connect 37 0 7 0;
+#X connect 37 1 5 0;
+#X connect 38 0 37 0;
+#X connect 39 0 38 1;
+#X connect 40 0 42 0;
+#X connect 41 0 43 1;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
+#X connect 45 0 40 0;
+#X connect 45 1 41 0;
+#X connect 46 0 45 0;
+#X connect 47 0 46 0;
+#X connect 47 1 10 0;
+#X connect 48 0 47 0;
+#X connect 49 0 48 1;
+#X connect 50 0 12 0;
+#X connect 51 0 31 0;
+#X connect 56 0 5 0;
+#X connect 57 0 5 0;
+#X connect 59 0 29 1;
+#X connect 60 0 18 0;
+#X connect 61 0 10 0;
+#X connect 62 0 26 0;
+#X connect 63 0 10 0;
+#X connect 64 0 10 0;
+#X connect 65 0 10 0;

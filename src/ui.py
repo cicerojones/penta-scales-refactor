@@ -16,16 +16,25 @@ _ARM_ON  = "background-color: #2e7d32; color: white; font-weight: bold;"
 _ARM_OFF = "background-color: #c62828; color: white; font-weight: bold;"
 
 
-def _scale_label(scale: ScaleEntry) -> str:
-    vals = scale.midi_values
-    active = "  ".join(f"{v:.2f}" for v in vals[:5])
-    octave = f"({vals[5]:.1f})" if len(vals) > 5 else ""
-    return f"{active}  {octave}".strip()
+def _scale_table(scale: ScaleEntry) -> str:
+    midi = scale.midi_values
+    img  = scale.image_values
 
+    _HDR = "color:#888;padding-right:10px;font-family:monospace"
+    _VAL = "text-align:right;padding:0 6px;font-family:monospace"
+    _OCT = "text-align:right;padding:0 6px;font-family:monospace;color:#888"
 
-def _scale_image_label(scale: ScaleEntry) -> str:
-    vals = scale.image_values
-    return "  ".join(vals[:5])
+    def td(content, style=_VAL):
+        return f'<td style="{style}">{content}</td>'
+
+    midi_cells = "".join(td(f"{v:.2f}") for v in midi[:5])
+    oct_midi   = td(f"({midi[5]:.1f})", _OCT) if len(midi) > 5 else ""
+    img_cells  = "".join(td(v) for v in img[:5])
+    oct_img    = td(img[5], _OCT) if len(img) > 5 else ""
+
+    row1 = f"<tr>{td('midi', _HDR)}{midi_cells}{oct_midi}</tr>"
+    row2 = f"<tr>{td('', _HDR)}{img_cells}{oct_img}</tr>"
+    return f'<table style="border-collapse:collapse;margin:4px 0">{row1}{row2}</table>'
 
 
 def _voice_line2(voice: VoiceEntry) -> str:
@@ -78,9 +87,8 @@ def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
     v_next_name = w.HTML()
     v_next_cat  = w.HTML()
 
-    # -- scale data rows
-    scale_midi_lbl  = w.HTML()
-    scale_image_lbl = w.HTML()
+    # -- scale data table
+    scale_table = w.HTML()
 
     # -- control buttons
     adv_both    = w.Button(description="Advance Both",   layout=w.Layout(width="140px"))
@@ -118,12 +126,7 @@ def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
         v_next_name.value = f'<span style="{_DIM}{_MONO}">{v_nxt.name}</span>'
         v_next_cat.value  = f'<span style="{_DIM}{_MONO}">{_voice_line2(v_nxt)}</span>'
 
-        scale_midi_lbl.value  = (
-            f'<span style="{_MONO}">midi: {_scale_label(t_cur)}</span>'
-        )
-        scale_image_lbl.value = (
-            f'<span style="{_MONO}">     {_scale_image_label(t_cur)}</span>'
-        )
+        scale_table.value = _scale_table(t_cur)
 
         # sync jump spinners to current pointers
         jump_t.value = state.tuning_ptr
@@ -180,8 +183,7 @@ def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
 
     display_row = w.HBox([tuning_box, w.HTML("&nbsp;&nbsp;&nbsp;"), voice_box])
 
-    scale_info = w.VBox([scale_midi_lbl, scale_image_lbl],
-                        layout=w.Layout(padding="4px 0"))
+    scale_info = scale_table
 
     button_row = w.HBox([adv_both, adv_tuning, adv_voice])
     jump_row   = w.HBox([jump_t, jump_v, reset_btn],

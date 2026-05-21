@@ -67,9 +67,8 @@ def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
 
     port_dropdown.observe(on_port_change, names="value")
 
-    # -- arm toggle
-    arm_btn = w.ToggleButton(
-        value=False,
+    # -- arm toggle (plain Button; we track toggle state via state.armed)
+    arm_btn = w.Button(
         description="DISARMED",
         layout=w.Layout(width="160px", height="40px"),
     )
@@ -144,13 +143,13 @@ def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
 
     # ---------------------------------------------------------------- wiring
 
-    def on_arm_toggle(change):
-        if change["new"]:
-            state.arm()
-        else:
+    def on_arm_click(_):
+        if state.armed:
             state.disarm()
+        else:
+            state.arm()
 
-    arm_btn.observe(on_arm_toggle, names="value")
+    arm_btn.on_click(on_arm_click)
     adv_both.on_click(lambda _: state.advance_both())
     adv_tuning.on_click(lambda _: state.advance_tuning())
     adv_voice.on_click(lambda _: state.advance_voice())

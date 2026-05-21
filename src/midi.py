@@ -1,17 +1,31 @@
 import mido
 
+_PREFERRED = "YAMAHA MOTIF6 PORT1"
+
 
 class MidiOut:
     def __init__(self, port_name: str | None = None):
         """
         Open a MIDI output port.
-        port_name=None opens the first available port.
+        port_name=None prefers YAMAHA MOTIF6 PORT1 if present, else first port.
         """
         available = mido.get_output_names()
         if not available:
             raise RuntimeError("No MIDI output ports found")
-        name = port_name if port_name is not None else available[0]
+        if port_name is None:
+            port_name = _PREFERRED if _PREFERRED in available else available[0]
+        self._port_name = port_name
+        self._port = mido.open_output(port_name)
+
+    @property
+    def port_name(self) -> str:
+        return self._port_name
+
+    def set_port(self, name: str) -> None:
+        """Close the current port and open a new one by name."""
+        self._port.close()
         self._port = mido.open_output(name)
+        self._port_name = name
 
     def send_sysex(self, messages: list[bytes]) -> None:
         """Send a list of pre-assembled sysex messages (each bytes object 240...247)."""

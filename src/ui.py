@@ -4,6 +4,7 @@ import ipywidgets as w
 from IPython.display import display
 
 from catalog import ScaleEntry, VoiceEntry
+from midi import MidiOut
 from state import PerformanceState
 
 # ------------------------------------------------------------------ helpers
@@ -36,7 +37,27 @@ def _voice_line2(voice: VoiceEntry) -> str:
 
 # ------------------------------------------------------------------ builder
 
-def build_ui(state: PerformanceState) -> w.Widget:
+def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
+    # -- port selector
+    ports = MidiOut.list_ports()
+    port_dropdown = w.Dropdown(
+        options=ports,
+        value=midi_out.port_name if midi_out.port_name in ports else (ports[0] if ports else None),
+        description="MIDI port:",
+        style={"description_width": "80px"},
+        layout=w.Layout(width="420px"),
+    )
+
+    def on_port_change(change):
+        try:
+            midi_out.set_port(change["new"])
+            port_dropdown.style.description_color = ""
+        except Exception as exc:
+            port_dropdown.style.description_color = "red"
+            print(f"Failed to open port {change['new']!r}: {exc}")
+
+    port_dropdown.observe(on_port_change, names="value")
+
     # -- arm toggle
     arm_btn = w.ToggleButton(
         value=False,
@@ -167,6 +188,7 @@ def build_ui(state: PerformanceState) -> w.Widget:
                         layout=w.Layout(align_items="flex-end"))
 
     return w.VBox([
+        port_dropdown,
         arm_btn,
         w.HTML("<hr style='margin:6px 0'>"),
         display_row,

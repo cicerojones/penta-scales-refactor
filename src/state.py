@@ -74,6 +74,15 @@ class PerformanceState:
         self.voice_ptr  = 0
         self._notify()
 
+    def reload(self, cues: list[Cue]) -> None:
+        """Swap in a new cue list and reset both pointers. Does not send."""
+        if not cues:
+            raise ValueError("Cue list must not be empty")
+        self._cues = cues
+        self.tuning_ptr = 0
+        self.voice_ptr  = 0
+        self._notify()
+
     # ------------------------------------------------------------------ current / next
 
     def current_tuning(self) -> ScaleEntry:

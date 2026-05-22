@@ -26,6 +26,11 @@ class VoiceEntry:
 
 _BANKS = ("PRE1", "PRE2", "PRE3", "USER", "GM")
 
+# Framing messages required by the Motif to open and commit a tuning bulk dump.
+# Source: pentatonic-motif-scales.pd → hide-scale-message subpatch.
+_TUNING_OPEN  = bytes([240, 67, 0, 107, 0, 0, 14, 47, 0, 67, 247])
+_TUNING_CLOSE = bytes([240, 67, 0, 107, 0, 0, 15, 47, 0, 66, 247])
+
 _SYSEX_FILES = {
     "PRE1": "PRE1-voices.txt",
     "PRE2": "PRE2-voices.txt",
@@ -148,7 +153,7 @@ class Catalog:
     def sysex_for_scale(self, index: int) -> list[bytes]:
         if index not in self._scale_sysex:
             raise ValueError(f"No sysex data for scale index {index}")
-        return self._scale_sysex[index]
+        return [_TUNING_OPEN] + self._scale_sysex[index] + [_TUNING_CLOSE]
 
     def sysex_for_voice(self, bank: str, voice_index: int) -> list[bytes]:
         bank_key = bank.strip().upper()

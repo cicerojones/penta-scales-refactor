@@ -33,22 +33,61 @@
   `MIDI_PORT` in cell 1 of the notebook, or left `None` to auto-select first
   port.
 
-## UI notes (to revisit after first live render)
+## UI notes
 
-- `next:` row currently shows dimmed name only. Could also dim the
-  category line — worth checking whether it's too cluttered.
-
-- Tuning "line 2" in the display currently shows the scale description text
-  (truncated to 40 chars) rather than a category field, since scales don't
-  have the same bank/category structure as voices. May want a different field
-  or just nothing there.
-
-- Fixed widget width of 520px may need adjustment depending on browser zoom
-  and notebook theme.
+- Tuning "line 2" shows scale description text (truncated to 40 chars).
+  No clean category equivalent for scales — may want to drop it or show
+  image_values[0] (the 1/1 ratio) as a hint about the tonal system instead.
 
 - The scale `image_values` field can contain rational fractions (e.g. `9/8`,
-  `4/3`) for JI tunings, not just decimals. These display correctly as
-  strings but won't sort/compare numerically if that's ever needed.
+  `4/3`) for JI tunings. Displays correctly as strings; not numerically comparable.
+
+- Fixed widget width of 560px. May need adjustment for different browser zoom
+  or notebook themes.
+
+- category_2 on voice entries sometimes contains a stray integer (e.g. `72`),
+  a 0-based cross-reference from the original Pd patch. Stored and displayed
+  literally; harmless but potentially confusing in the UI.
+
+## In-progress / soon
+
+### Cuelist generator — next capabilities
+The filter+weight approach is in place. Likely next steps:
+
+- **Scale family helpers**: convenience wrappers that group scales by
+  cultural/tonal family (Gamelan, Mbira, Harrison, Slendro variants, etc.)
+  so the generator cell reads `gamelan_scales` rather than a long `contains`
+  list. These could live as constants or functions in `cuelist_gen.py`.
+
+- **Constraint pairing**: some musical contexts want to pair a scale family
+  with a matching timbral category (e.g. Gamelan scales → mallet/bell voices,
+  Mbira scales → pluck voices). A `constrained_pairs(rules)` function could
+  express this as a list of `(scale_filter, voice_filter, weight)` tuples
+  and produce a weighted-random mix across multiple constraint groups.
+
+- **Anchor cues**: ability to fix certain (tuning, voice) pairs at specific
+  positions and fill the rest randomly — useful for pieces with a known
+  opening and closing but a generative middle section.
+
+### Autostep — possible refinements
+- **Humanize**: add optional jitter (`± N seconds`) to the interval so the
+  advance doesn't feel metronomic. Small random offset drawn each cycle.
+- **Count-based stopping**: stop after N advances rather than running until
+  manually toggled off.
+- **Sync to manual**: reset the autostep timer whenever a manual advance
+  fires, so manual and auto don't pile up.
+
+### Timing delay audit
+`_INTER_MSG_DELAY = 0.020` in `midi.py` was added before the sysex framing
+fix. May be unnecessary. Test by setting to `0` and checking for glitches
+on both tuning and voice sends. If clean, remove.
+
+### Wilson scales
+`three-coll-tunings.txt` holds Wilson 17, 31, 41 scales. The original patch
+accessed them via a separate `other-scales` subpatch with hardcoded sysex.
+Adding them as a second `Catalog` source or a new bank is straightforward;
+blocked only on deciding whether to expose them through the same scale-name
+lookup or as a separate pool.
 
 ## Unused resource files (probably safe to ignore)
 

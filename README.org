@@ -1,0 +1,21 @@
+Diagnostics
+#+begin_src python
+# Diagnostic: send the tuning-open framing message alone.
+  # If the Motif briefly mutes or its display flickers, the port is correct.
+  open_msg = bytes([240, 67, 0, 107, 0, 0, 14, 47, 0, 67, 247])
+  midi_out.send_sysex([open_msg])
+  print("sent:", open_msg.hex(' '))
+#+end_src
+
+  Then, to send one complete scale with framing:
+#+begin_src python
+
+  # Send SLENDROB3 tuning (framing + 25 data messages + framing close)
+  scale = catalog.scale_by_name('SLENDROB3')
+  msgs = catalog.sysex_for_scale(scale.index)
+  print(f"{len(msgs)} messages  |  first: {msgs[0].hex(' ')}")
+  midi_out.send_sysex(msgs)
+#+end_src
+
+  The msgs[0] hex should now be f0 43 00 6b 00 00 0e 47 00 43 f7 (the open frame), not the raw tuning data. The 20ms
+  inter-message delay is still in place, so the full 27-message sequence (1 open + 25 data + 1 close) takes about 0.5s.

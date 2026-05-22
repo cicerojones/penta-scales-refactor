@@ -3,6 +3,7 @@ from __future__ import annotations
 import ipywidgets as w
 from IPython.display import display
 
+from autostepper import AutoStepper
 from catalog import ScaleEntry, VoiceEntry
 from midi import MidiOut
 from state import PerformanceState
@@ -12,8 +13,6 @@ from state import PerformanceState
 _DIM   = "color: #888888;"
 _BOLD  = "font-weight: bold;"
 _MONO  = "font-family: monospace;"
-_ARM_ON  = "background-color: #2e7d32; color: white; font-weight: bold;"
-_ARM_OFF = "background-color: #c62828; color: white; font-weight: bold;"
 
 
 def _scale_table(scale: ScaleEntry) -> str:
@@ -47,6 +46,8 @@ def _voice_line2(voice: VoiceEntry) -> str:
 # ------------------------------------------------------------------ builder
 
 def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
+    auto = AutoStepper(state)
+
     # -- port selector
     ports = MidiOut.list_ports()
     port_dropdown = w.Dropdown(
@@ -67,18 +68,33 @@ def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
 
     port_dropdown.observe(on_port_change, names="value")
 
-    # -- arm toggle (plain Button; we track toggle state via state.armed)
+    # -- arm toggle
     arm_btn = w.Button(
         description="DISARMED",
         layout=w.Layout(width="160px", height="40px"),
     )
     arm_btn.style.button_color = "#c62828"
 
+    # -- autostep toggle + interval
+    auto_btn = w.Button(
+        description="AUTO: OFF",
+        layout=w.Layout(width="120px", height="40px"),
+    )
+    auto_btn.style.button_color = "#c62828"
+
+    interval_box = w.BoundedFloatText(
+        value=auto.interval_s,
+        min=0.5, max=600.0, step=0.5,
+        description="every",
+        style={"description_width": "40px"},
+        layout=w.Layout(width="120px"),
+    )
+    interval_label = w.HTML("<span style='line-height:40px'>&nbsp;s</span>")
+
     # -- tuning display
     t_now_name  = w.HTML()
     t_now_cat   = w.HTML()
     t_next_name = w.HTML()
-    t_next_cat  = w.HTML()
 
     # -- voice display
     v_now_name  = w.HTML()
@@ -116,9 +132,8 @@ def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
         v_nxt  = state.next_voice()
 
         t_now_name.value  = f'<span style="{_BOLD}{_MONO}">{t_cur.name}</span>'
-        t_now_cat.value   = f'<span style="{_MONO}">{_voice_line2_for_scale(t_cur)}</span>'
+        t_now_cat.value   = f'<span style="{_MONO}">{t_cur.description.replace("_", " ")[:40]}</span>'
         t_next_name.value = f'<span style="{_DIM}{_MONO}">{t_nxt.name}</span>'
-        t_next_cat.value  = f'<span style="{_DIM}{_MONO}">—</span>'
 
         v_now_name.value  = f'<span style="{_BOLD}{_MONO}">{v_cur.name}</span>'
         v_now_cat.value   = f'<span style="{_MONO}">{_voice_line2(v_cur)}</span>'
@@ -127,16 +142,16 @@ def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
 
         scale_table.value = _scale_table(t_cur)
 
-        # sync jump spinners to current pointers
         jump_t.value = state.tuning_ptr
         jump_v.value = state.voice_ptr
 
         armed = state.armed
-        arm_btn.description  = "ARMED" if armed else "DISARMED"
-        arm_btn.style.button_color = "#2e7d32" if armed else "#c62828"
+        arm_btn.description        = "ARMED"    if armed        else "DISARMED"
+        arm_btn.style.button_color = "#2e7d32"  if armed        else "#c62828"
 
-    def _voice_line2_for_scale(_scale: ScaleEntry) -> str:
-        return _scale.description.replace("_", " ")[:40]
+        running = auto.running
+        auto_btn.description        = "AUTO: ON"  if running else "AUTO: OFF"
+        auto_btn.style.button_color = "#1565c0"   if running else "#c62828"
 
     state._on_change = refresh
     refresh()
@@ -149,7 +164,17 @@ def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
         else:
             state.arm()
 
+    def on_auto_click(_):
+        auto.toggle()
+        refresh()
+
+    def on_interval_change(change):
+        auto.interval_s = change["new"]
+
     arm_btn.on_click(on_arm_click)
+    auto_btn.on_click(on_auto_click)
+    interval_box.observe(on_interval_change, names="value")
+
     adv_both.on_click(lambda _: state.advance_both())
     adv_tuning.on_click(lambda _: state.advance_tuning())
     adv_voice.on_click(lambda _: state.advance_voice())
@@ -180,21 +205,21 @@ def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
         w.HTML('<span style="color:#aaa">next:</span>'), v_next_name, v_next_cat,
     ], layout=w.Layout(border="1px solid #ccc", padding="8px", min_width="200px"))
 
-    display_row = w.HBox([tuning_box, w.HTML("&nbsp;&nbsp;&nbsp;"), voice_box])
-
-    scale_info = scale_table
-
-    button_row = w.HBox([adv_both, adv_tuning, adv_voice])
-    jump_row   = w.HBox([jump_t, jump_v, reset_btn],
-                        layout=w.Layout(align_items="flex-end"))
+    display_row  = w.HBox([tuning_box, w.HTML("&nbsp;&nbsp;&nbsp;"), voice_box])
+    top_row      = w.HBox([arm_btn, w.HTML("&nbsp;&nbsp;"),
+                           auto_btn, interval_box, interval_label],
+                          layout=w.Layout(align_items="center"))
+    button_row   = w.HBox([adv_both, adv_tuning, adv_voice])
+    jump_row     = w.HBox([jump_t, jump_v, reset_btn],
+                          layout=w.Layout(align_items="flex-end"))
 
     return w.VBox([
         port_dropdown,
-        arm_btn,
+        top_row,
         w.HTML("<hr style='margin:6px 0'>"),
         display_row,
-        scale_info,
+        scale_table,
         w.HTML("<hr style='margin:6px 0'>"),
         button_row,
         jump_row,
-    ], layout=w.Layout(padding="12px", width="520px"))
+    ], layout=w.Layout(padding="12px", width="560px"))

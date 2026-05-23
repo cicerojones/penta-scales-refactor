@@ -77,11 +77,6 @@ The filter+weight approach is in place. Likely next steps:
 - **Sync to manual**: reset the autostep timer whenever a manual advance
   fires, so manual and auto don't pile up.
 
-### Timing delay audit
-`_INTER_MSG_DELAY = 0.020` in `midi.py` was added before the sysex framing
-fix. May be unnecessary. Test by setting to `0` and checking for glitches
-on both tuning and voice sends. If clean, remove.
-
 ### Wilson scales
 `three-coll-tunings.txt` holds Wilson 17, 31, 41 scales. The original patch
 accessed them via a separate `other-scales` subpatch with hardcoded sysex.

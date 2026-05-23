@@ -1,9 +1,6 @@
-import time
-
 import mido
 
 _PREFERRED = "YAMAHA MOTIF6 PORT1"
-_INTER_MSG_DELAY = 0  # was 20 ms; testing whether framing fix made this unnecessary
 
 
 class MidiOut:
@@ -32,12 +29,10 @@ class MidiOut:
 
     def send_sysex(self, messages: list[bytes]) -> None:
         """Send a list of pre-assembled sysex messages (each bytes object 240...247)."""
-        for i, msg_bytes in enumerate(messages):
+        for msg_bytes in messages:
             # mido SysexData strips the 0xF0/0xF7 framing bytes
             data = tuple(msg_bytes[1:-1])
             self._port.send(mido.Message("sysex", data=data))
-            if i < len(messages) - 1:
-                time.sleep(_INTER_MSG_DELAY)
 
     def close(self) -> None:
         self._port.close()

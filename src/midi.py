@@ -3,7 +3,7 @@ import time
 import mido
 
 _PREFERRED = "YAMAHA MOTIF6 PORT1"
-_INTER_MSG_DELAY = 0.020  # 20 ms between sysex messages (DIN MIDI rate limiting)
+_INTER_MSG_DELAY = 0  # was 20 ms; testing whether framing fix made this unnecessary
 
 
 class MidiOut:

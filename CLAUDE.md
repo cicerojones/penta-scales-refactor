@@ -60,24 +60,68 @@ a single on/off switch, and timing was ad hoc. The rewrite should have:
 
 ## Tech stack
 
-- Python 3.x (compatible with older macOS)
-- `mido` or `python-rtmidi` for MIDI/sysex sending
-- `ipywidgets` for UI (target environment: Jupyter notebook)
-- Cue list format: CSV or org-table (TBD — ask user)
+- Python 3.11 (target; runtime machine is macOS Catalina with Homebrew Python)
+- `mido` (rtmidi backend) for MIDI/sysex sending
+- `ipywidgets` for UI (Jupyter notebook)
+- Cue list format: CSV (`tuning,BANK:voice`)
+
+## Current file structure
+
+```
+src/
+  coll.py          parse Pd coll format; split_sysex
+  catalog.py       Catalog, ScaleEntry, VoiceEntry; sysex lookups
+  cuelist.py       load_cuelist; Cue dataclass
+  cuelist_gen.py   filter_scales, filter_voices, generate_cuelist, write_cuelist
+  midi.py          MidiOut wrapper (20 ms inter-message delay for DIN MIDI)
+  state.py         PerformanceState; arm/advance/jump/reset/reload
+  autostepper.py   AutoStepper(state, interval_s, mode); daemon thread
+  ui.py            build_ui → ipywidgets layout
+tests/
+  test_coll.py  test_catalog.py  test_cuelist.py  test_state.py   (47 tests)
+notebook.ipynb   cells: config | port check | main widget | cuelist generator
+example_cuelist.csv
+```
+
+## Critical sysex detail
+
+Every bulk sysex send (tuning or voice) must be wrapped with two Motif
+framing messages discovered in the original Pd patch subpatches:
+
+- **Open**:  `F0 43 00 6B 00 00 0E 47 00 43 F7`
+- **Close**: `F0 43 00 6B 00 00 0F 47 00 42 F7`
+
+`catalog.sysex_for_scale()` and `catalog.sysex_for_voice()` both prepend/
+append these automatically. Do not remove them.
+
+## Autostep
+
+Two independent `AutoStepper` instances (tuning, voice) live inside
+`build_ui`. Each has its own toggle button and interval spinner in the UI.
+`mode` parameter: `"tuning"`, `"voice"`, or `"both"`. The thread is
+`daemon=True` and advances the state on a background thread; ipywidgets
+handles cross-thread display updates.
+
+## Cuelist generation
+
+`cuelist_gen.py` provides:
+- `filter_scales(catalog, contains=...)` — name substring filter
+- `filter_voices(catalog, banks=..., category_abbr=..., category_1=...)` — bank/category filter
+- `generate_cuelist(scales, voices, n, strategy, weights_s, weights_v, seed)`
+  strategies: `"random"` (default), `"cross_product"`, `"zip"`
+- `write_cuelist(path, pairs)` — CSV output
+
+`state.reload(cues)` hot-swaps the cue list without restarting the widget.
+The generator notebook cell uses `try/except NameError` to work both before
+and after the main cell has been run.
 
 ## Known deferred problems
 
-- Tuning changes interrupting mid-sequence playback: **out of scope for v1**.
-  The user controls timing manually; the tool does not attempt to solve this.
+- Timing delay (`_INTER_MSG_DELAY = 0.020` in `midi.py`) may be unnecessary
+  now that the sysex framing is correct — worth testing with `0` once stable.
 - Integration with Logic Pro transport: **future project**
-- Visual patch-like frontend (beyond ipywidgets): **future project**
-
-## What to ask the user before writing code
-
-1. What is the exact format of the on-disk byte sequence files?
-2. Preferred cue list format: CSV, org-table, or something else?
-3. Which MIDI library has already been tested on their machines: mido or python-rtmidi?
-4. Should tuning and program advance together (single cue pointer) or independently?
+- Wilson 17/31/41 scales (`three-coll-tunings.txt`) not yet wired in;
+  straightforward to add as a separate bank when needed.
 
 ## User context
 

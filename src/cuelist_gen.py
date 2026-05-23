@@ -3,14 +3,29 @@ Programmatic cuelist generation.
 
 Typical notebook usage:
 
-    from cuelist_gen import filter_scales, filter_voices, generate_cuelist, write_cuelist
+    from cuelist_gen import family_scales, filter_voices, generate_cuelist, write_cuelist
     from cuelist import load_cuelist
 
-    scales = filter_scales(catalog, contains=['DEGUNG', 'PELOG', 'SLENDRO'])
+    scales = family_scales(catalog, 'slendro', 'pelog')
     voices = filter_voices(catalog, banks=['PRE2'], category_abbr=['Pd', 'St'])
     pairs  = generate_cuelist(scales, voices, n=20, seed=42)
     write_cuelist(CUELIST_PATH, pairs)
     state.reload(load_cuelist(CUELIST_PATH, catalog))
+
+Scale families (see SCALE_FAMILIES for name-substring patterns):
+    Javanese/Sundanese: slendro  pelog   degung  surupan  selisir  miring
+    Balinese:           kebyar
+    Broad umbrella:     gamelan  (all of the above + renteng, jemblung, etc.)
+    African:            mbira    african (mbira + balafon + madimba + pygmie)
+    East Asian:         east_asian          (chin, hirajoshi, korea)
+    Southeast Asian:    southeast_asian     (tranh, ho_mai_nhi)
+    Lou Harrison JI:    harrison            (harrison_* + prime_5)
+    Erv Wilson:         hexany
+    Middle Eastern:     middle_eastern      (isfahan, islamic, saba)
+    Indian:             indian              (malkauns)
+    Ancient Greek:      ancient_greek       (olympos, div_fifth, spondeion)
+    Temperament/math:   temperament         (keen, swet, ogr5, smithgw72, ...)
+    JI/rational:        ji                  (ji_5coh, farey, golden, neutr_pent, ...)
 
 category_abbr reference (from resources):
     Ap  acoustic piano     Pd  pad          St  strings
@@ -31,6 +46,73 @@ import csv
 import random
 
 from catalog import Catalog, ScaleEntry, VoiceEntry
+
+# Maps family name → list of name substrings (case-insensitive OR match).
+# Patterns are checked against ScaleEntry.name via filter_scales(contains=...).
+SCALE_FAMILIES: dict[str, list[str]] = {
+    # Javanese / Sundanese gamelan
+    "slendro":        ["SLENDRO"],
+    "pelog":          ["PELOG", "SCHULTER_PEL"],
+    "degung":         ["DEGUNG"],
+    "surupan":        ["SURUPAN"],
+    "selisir":        ["SELISIR"],
+    "miring":         ["MIRING"],
+    # Balinese gamelan
+    "kebyar":         ["KEBYAR"],
+    # Broad gamelan umbrella (all Javanese/Sundanese/Balinese)
+    "gamelan":        [
+        "SLENDRO", "PELOG", "SCHULTER_PEL", "DEGUNG", "SURUPAN",
+        "KEBYAR", "SELISIR", "MIRING", "RENTENG", "JEMBLUNG",
+        "GENGGONG", "SALUNDING", "TRAWAS", "SOROG", "MELOG",
+        "MADENDA", "SEJATI",
+    ],
+    # African
+    "mbira":          ["MBIRA"],
+    "african":        ["MBIRA", "BALAFON", "MADIMBA", "PYGMIE", "XYLOPHONE"],
+    # East / Southeast Asian
+    "east_asian":     ["CHIN", "HIRAJOSHI", "KOREA"],
+    "southeast_asian": ["TRANH", "HO_MAI_NHI"],
+    # Lou Harrison JI (prime_5 is his naming)
+    "harrison":       ["HARRISON", "PRIME_5"],
+    # Erv Wilson hexanies
+    "hexany":         ["HEXANY"],
+    # Middle Eastern
+    "middle_eastern": ["ISFAHAN", "ISLAMIC", "SABA"],
+    # Indian
+    "indian":         ["MALKAUNS"],
+    # Ancient Greek
+    "ancient_greek":  ["OLYMPOS", "DIV_FIFTH", "SPON"],
+    # Temperament / mathematical constructions (05-NN are EDO subsets)
+    "temperament":    ["KEEN", "SWET", "OGR5", "SMITHGW72", "TEMP5", "FJ-5TET", "DIMTETB", "PIPEDUM",
+                       "05-19", "05-22", "05-24"],
+    # Just Intonation / rational scales
+    "ji":             ["JI_5COH", "FAREY", "GOLDEN", "NEUTR_PENT", "MINOR_5", "CONS9", "PENTA_OPT"],
+}
+
+
+def family_scales(catalog: Catalog, *families: str) -> list[ScaleEntry]:
+    """Return scales belonging to one or more named families, deduplicated.
+
+    family_scales(catalog, 'slendro')
+    family_scales(catalog, 'slendro', 'pelog')   # union, no duplicates
+
+    Raises ValueError for unknown family names.
+    """
+    unknown = [f for f in families if f not in SCALE_FAMILIES]
+    if unknown:
+        raise ValueError(
+            f"Unknown families: {unknown!r}. Available: {sorted(SCALE_FAMILIES)}"
+        )
+    patterns: list[str] = []
+    for f in families:
+        patterns.extend(SCALE_FAMILIES[f])
+    seen: set[int] = set()
+    result: list[ScaleEntry] = []
+    for s in filter_scales(catalog, contains=patterns):
+        if s.index not in seen:
+            seen.add(s.index)
+            result.append(s)
+    return result
 
 
 def filter_scales(

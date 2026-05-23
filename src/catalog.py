@@ -11,6 +11,7 @@ class ScaleEntry:
     description: str
     midi_values: list[float]   # 6 values: root, 4 degrees, octave
     image_values: list[str]    # 6 values: root, 4 degrees, octave (cents or ratios)
+    provenance: str = ""       # comment line from the .scl source file
 
 
 @dataclass
@@ -65,8 +66,23 @@ class Catalog:
 
     # ------------------------------------------------------------------ scales
 
+    @staticmethod
+    def _read_scl_provenance(scl2_dir: str, name: str) -> str:
+        stem = name.lower()
+        for candidate in (stem, stem.replace("_", " ")):
+            path = os.path.join(scl2_dir, candidate + ".scl")
+            try:
+                with open(path, encoding="utf-8", errors="replace") as f:
+                    lines = f.readlines()
+                if len(lines) >= 3:
+                    return lines[2].strip()
+            except FileNotFoundError:
+                pass
+        return ""
+
     def _load_scales(self):
         p = lambda f: os.path.join(self._dir, f)
+        scl2_dir = os.path.join(self._dir, "scl2")
 
         names = parse_coll_strs(p("penta-scales-names.txt"))
         descs = parse_coll_strs(p("penta-scales-desc.txt"))
@@ -86,6 +102,7 @@ class Catalog:
                 description=desc,
                 midi_values=midi_vals,
                 image_values=img_vals,
+                provenance=self._read_scl_provenance(scl2_dir, name),
             )
             self._scales.append(entry)
             self._scale_by_name[name.upper()] = entry

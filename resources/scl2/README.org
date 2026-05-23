@@ -1,0 +1,21 @@
+* Scala tunings for loading
+so, making sure you're in the right directory is essential. It appears that Scala, as an X11 application, starts up in a /tmp folder!
+
+
+cd /Users/li/Desktop/
+
+Secondly, the distinction between pd-scales and pd-scale-player is not at all clear. Prefer the latter.
+
+Lastly, if you're really gonna own this...learn the ITERATE/scale 
+
+like 
+
+iterate show *.scl, which will run the voodoo down on...waayy too much if you're not careful
+
+What are these examples of? Drawn from the pd .cmd files?
+
+ITERATE/SCALE "echo #X text %num(%1%5) %num(%i%1) %num(%i%7):;" 8
+
+ITERATE/SCALE "echo %num(%1%5) %num(%i%1) %num(%i%7):;" 8
+
+iterate/scale "echo %cents(%i)" 0

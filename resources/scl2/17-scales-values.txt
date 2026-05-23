@@ -1,0 +1,2289 @@
+|
+17-31.scl
+17 out of 31, with split C#/Db, D#/Eb, F#/Gb, G#/Ab and A#/Bb
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         77.419 cents      77.419350
+  2:        116.129 cents     116.129030
+  3:        193.548 cents     193.548390
+  4:        270.968 cents     270.967740
+  5:        309.677 cents     309.677420
+  6:        387.097 cents     387.096770
+  7:        503.226 cents     503.225810
+  8:        580.645 cents     580.645160
+  9:        619.355 cents     619.354840
+ 10:        696.774 cents     696.774190
+ 11:        774.194 cents     774.193550
+ 12:        812.903 cents     812.903230
+ 13:        890.323 cents     890.322580
+ 14:        967.742 cents     967.741940
+ 15:       1006.452 cents    1006.451610
+ 16:       1083.871 cents    1083.870970
+ 17:          2/1            1200.000000 octave
+|
+17-53.scl
+
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         90.566 cents      90.566040
+  2:        181.132 cents     181.132080
+  3:        203.774 cents     203.773580
+  4:        294.340 cents     294.339620
+  5:        384.906 cents     384.905660
+  6:        407.547 cents     407.547170
+  7:        498.113 cents     498.113210
+  8:        588.679 cents     588.679250
+  9:        679.245 cents     679.245280
+ 10:        701.887 cents     701.886790
+ 11:        792.453 cents     792.452830
+ 12:        883.019 cents     883.018870
+ 13:        905.660 cents     905.660380
+ 14:        996.226 cents     996.226420
+ 15:       1086.792 cents    1086.792450
+ 16:       1177.358 cents    1177.358490
+ 17:          2/1            1200.000000 octave
+|
+avicenna_17.scl
+Tuning by Avicenna (Ibn Sina), Ahmed Mahmud Hifni, Cairo, 1977
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        273/256           111.308569 Ibn Sina's minor second
+  2:         13/12            138.572661 tridecimal 2/3-tone
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:         39/32            342.482663 39th harmonic, Zalzal wosta of Ibn Sina
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:         91/64            609.353568
+  9:         13/9             636.617660 tridecimal diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:         13/8             840.527662 tridecimal neutral sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         91/48           1107.398567
+ 16:         52/27           1134.662659
+ 17:          2/1            1200.000000 octave
+|
+barlow_17.scl
+11-limit rational 17-equal, Barlow, On the Quantification of Harmony and Metre
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         25/24             70.672427 classic chromatic semitone, minor chroma
+  2:         27/25            133.237575 large limma, BP small semitone, Zarlino semitone
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:         11/9             347.407941 undecimal neutral third
+  6:         32/25            427.372572 classic diminished fourth
+  7:          4/3             498.044999 perfect fourth
+  8:         25/18            568.717426 classic augmented fourth
+  9:         36/25            631.282574 classic diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         25/16            772.627428 classic augmented fifth
+ 12:         18/11            852.592059 undecimal neutral sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         50/27           1066.762425 grave major seventh
+ 16:         48/25           1129.327573 classic diminished octave
+ 17:          2/1            1200.000000 octave
+|
+bps_temp17.scl
+Bohlen-Pierce-Stearn temperament. Highest 7-limit error 8.4 cents, 2001
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         47.935 cents      47.935000
+  2:        179.490 cents     179.490000
+  3:        311.045 cents     311.045000
+  4:        442.600 cents     442.600000
+  5:        490.535 cents     490.535000
+  6:        622.090 cents     622.090000
+  7:        753.645 cents     753.645000
+  8:        885.200 cents     885.200000
+  9:        933.135 cents     933.135000
+ 10:       1064.690 cents    1064.690000
+ 11:       1196.245 cents    1196.245000
+ 12:       1327.800 cents    1327.800000
+ 13:       1375.735 cents    1375.735000
+ 14:       1507.290 cents    1507.290000
+ 15:       1638.845 cents    1638.845000
+ 16:       1770.400 cents    1770.400000
+ 17:          3/1            1901.955001 perfect 12th
+|
+cartwheel.scl
+Andrew Heathwite's 13-limit wakalix
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         28/27             62.960904 Archytas' 1/3-tone
+  2:         13/12            138.572661 tridecimal 2/3-tone
+  3:          9/8             203.910002 major whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:         11/9             347.407941 undecimal neutral third
+  6:          5/4             386.313714 major third
+  7:          4/3             498.044999 perfect fourth
+  8:         11/8             551.317942 undecimal semi-augmented fourth
+  9:         13/9             636.617660 tridecimal diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:         13/8             840.527662 tridecimal neutral sixth
+ 13:          5/3             884.358713 major sixth, BP sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 16:         15/8            1088.268715 classic major seventh
+ 17:          2/1            1200.000000 octave
+|
+catakleismic34semitransversal.scl
+17 note 2.3.7 semitransversal of Catakleismic[34]
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         28/27             62.960904 Archytas' 1/3-tone
+  2:        243/224           140.949098 Archytas' 2/3-tone
+  3:          9/8             203.910002 major whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:        243/196           372.123191
+  6:          9/7             435.084095 septimal major third, BP third
+  7:          4/3             498.044999 perfect fourth
+  8:        112/81            561.005903
+  9:         81/56            638.994097
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:        392/243           827.876809
+ 13:         12/7             933.129094 septimal major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:        448/243          1059.050902
+ 16:         27/14           1137.039096 septimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+cet111a.scl
+17th root of 3. McLaren 'Microtonal Music', volume 1, track 8
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        111.880 cents     111.879710
+  2:        223.759 cents     223.759410
+  3:        335.639 cents     335.639120
+  4:        447.519 cents     447.518820
+  5:        559.399 cents     559.398530
+  6:        671.278 cents     671.278240
+  7:        783.158 cents     783.157940
+  8:        895.038 cents     895.037650
+  9:       1006.917 cents    1006.917350
+ 10:       1118.797 cents    1118.797060
+ 11:       1230.677 cents    1230.676770
+ 12:       1342.556 cents    1342.556470
+ 13:       1454.436 cents    1454.436180
+ 14:       1566.316 cents    1566.315880
+ 15:       1678.196 cents    1678.195590
+ 16:       1790.075 cents    1790.075290
+ 17:          3/1            1901.955001 perfect 12th
+|
+cet141.scl
+17th root of 4
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        141.176 cents     141.176470
+  2:        282.353 cents     282.352940
+  3:        423.529 cents     423.529410
+  4:        564.706 cents     564.705880
+  5:        705.882 cents     705.882350
+  6:        847.059 cents     847.058820
+  7:        988.235 cents     988.235290
+  8:       1129.412 cents    1129.411760
+  9:       1270.588 cents    1270.588240
+ 10:       1411.765 cents    1411.764710
+ 11:       1552.941 cents    1552.941180
+ 12:       1694.118 cents    1694.117650
+ 13:       1835.294 cents    1835.294120
+ 14:       1976.471 cents    1976.470590
+ 15:       2117.647 cents    2117.647060
+ 16:       2258.824 cents    2258.823530
+ 17:          4/1            2400.000000 2 octaves
+|
+cet182.scl
+17th root of 6, Moreno's C-17
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        182.468 cents     182.467940
+  2:        364.936 cents     364.935880
+  3:        547.404 cents     547.403820
+  4:        729.872 cents     729.871760
+  5:        912.340 cents     912.339710
+  6:       1094.808 cents    1094.807650
+  7:       1277.276 cents    1277.275590
+  8:       1459.744 cents    1459.743530
+  9:       1642.211 cents    1642.211470
+ 10:       1824.679 cents    1824.679410
+ 11:       2007.147 cents    2007.147350
+ 12:       2189.615 cents    2189.615290
+ 13:       2372.083 cents    2372.083240
+ 14:       2554.551 cents    2554.551180
+ 15:       2737.019 cents    2737.019120
+ 16:       2919.487 cents    2919.487060
+ 17:          6/1            3101.955001 perfect 19th
+|
+cet90.scl
+Scale with limma steps                                                          
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        256/243            90.224996 limma, Pythagorean minor second
+  2:      65536/59049         180.449991 Pythagorean diminished third
+  3:   16777216/14348907      270.674987 Pythagorean double diminished fourth
+  4:        360.900 cents     360.899980
+  5:        451.125 cents     451.124980
+  6:        541.350 cents     541.349970
+  7:        631.575 cents     631.574970
+  8:        721.800 cents     721.799970
+  9:        812.025 cents     812.024960
+ 10:        902.250 cents     902.249960
+ 11:        992.475 cents     992.474950
+ 12:       1082.700 cents    1082.699950
+ 13:       1172.925 cents    1172.924940
+ 14:       1263.150 cents    1263.149940
+ 15:       1353.375 cents    1353.374940
+ 16:       1443.600 cents    1443.599930
+ 17:       1533.825 cents    1533.824930
+|
+cet98phi.scl
+Phi + 1 equal division by 17, Brouncker (1653)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         98.011 cents      98.010620
+  2:        196.021 cents     196.021250
+  3:        294.032 cents     294.031870
+  4:        392.042 cents     392.042490
+  5:        490.053 cents     490.053120
+  6:        588.064 cents     588.063740
+  7:        686.074 cents     686.074360
+  8:        784.085 cents     784.084980
+  9:        882.096 cents     882.095610
+ 10:        980.106 cents     980.106230
+ 11:       1078.117 cents    1078.116850
+ 12:       1176.127 cents    1176.127480
+ 13:       1274.138 cents    1274.138100
+ 14:       1372.149 cents    1372.148720
+ 15:       1470.159 cents    1470.159350
+ 16:       1568.170 cents    1568.169970
+ 17:       1666.181 cents    1666.180590
+|
+chalmers_17.scl
+7-limit figurative scale, Chalmers '96 Adnexed S&H decads                       
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         36/35             48.770381 septimal diesis, 1/4-tone
+  2:         35/32            155.139620 septimal neutral second
+  3:          9/8             203.910002 major whole tone
+  4:          6/5             315.641287 minor third
+  5:          5/4             386.313714 major third
+  6:          9/7             435.084095 septimal major third, BP third
+  7:         21/16            470.780907 narrow fourth
+  8:         36/25            631.282574 classic diminished fifth
+  9:         72/49            666.258189 Arabic lute grave fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         49/32            737.651813
+ 12:         25/16            772.627428 classic augmented fifth
+ 13:         12/7             933.129094 septimal major sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:          9/5            1017.596288 just minor seventh, BP seventh
+ 16:         15/8            1088.268715 classic major seventh
+ 17:          2/1            1200.000000 octave
+|
+clipper100.scl
+Clipper(100/99), 2.3.5.11, POTE tuning
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        110.979 cents     110.979250
+  2:        174.161 cents     174.161030
+  3:        237.343 cents     237.342800
+  4:        348.322 cents     348.322050
+  5:        384.068 cents     384.067510
+  6:        495.047 cents     495.046760
+  7:        558.229 cents     558.228530
+  8:        606.026 cents     606.026010
+  9:        669.208 cents     669.207790
+ 10:        732.390 cents     732.389560
+ 11:        815.932 cents     815.932490
+ 12:        879.114 cents     879.114270
+ 13:        942.296 cents     942.296040
+ 14:        990.094 cents     990.093520
+ 15:       1053.275 cents    1053.275290
+ 16:       1164.255 cents    1164.254550
+ 17:          2/1            1200.000000 octave
+|
+cons18.scl
+Set of intervals with num + den <= 18 not exceeding 2/1                         
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:          9/8             203.910002 major whole tone
+  2:          8/7             231.174094 septimal whole tone
+  3:          7/6             266.870906 septimal minor third
+  4:          6/5             315.641287 minor third
+  5:          5/4             386.313714 major third
+  6:          9/7             435.084095 septimal major third, BP third
+  7:          4/3             498.044999 perfect fourth
+  8:          7/5             582.512193 septimal or Huygens' tritone, BP fourth
+  9:         10/7             617.487807 Euler's tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:         11/7             782.492036 undecimal augmented fifth
+ 12:          8/5             813.686286 minor sixth
+ 13:          5/3             884.358713 major sixth, BP sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:          9/5            1017.596288 just minor seventh, BP seventh
+ 16:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 17:          2/1            1200.000000 octave
+|
+coul_17sup.scl
+Superparticular approximation to Pythagorean 17-tone scale. Op de Coul, 2003
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         19/18             93.603014 undevicesimal semitone
+  2:         16/15            111.731285 minor diatonic semitone
+  3:        152/135           205.334300
+  4:         32/27            294.134997 Pythagorean minor third
+  5:          6/5             315.641287 minor third
+  6:         19/15            409.244301 undevicesimal ditone
+  7:          4/3             498.044999 perfect fourth
+  8:         38/27            591.648014
+  9:         64/45            609.776284 2nd tritone
+ 10:        608/405           703.379299
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:          8/5             813.686286 minor sixth
+ 13:         76/45            907.289301
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:          9/5            1017.596288 just minor seventh, BP seventh
+ 16:         19/10           1111.199302 undevicesimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+diab17a.scl
+[25, 125, 175, 2401, 12005] breed diamond
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:       2560/2401          111.010088
+  2:        343/320           120.164006
+  3:          8/7             231.174094 septimal whole tone
+  4:        400/343           266.149708
+  5:       2401/2000          316.362484
+  6:          5/4             386.313714 major third
+  7:       3200/2401          497.323802
+  8:          7/5             582.512193 septimal or Huygens' tritone, BP fourth
+  9:         10/7             617.487807 Euler's tritone
+ 10:       2401/1600          702.676198 two (larger approximation to neutral third)
+ 11:          8/5             813.686286 minor sixth
+ 12:       4000/2401          883.637516
+ 13:        343/200           933.850292
+ 14:          7/4             968.825906 harmonic seventh
+ 15:        640/343          1079.835994
+ 16:       2401/1280         1088.989912
+ 17:          2/1            1200.000000 octave
+|
+diaconv2401.scl
+convex closure of 7-limit diamond with respect to 2401/2400
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         49/48             35.696812 slendro diesis, septimal 1/6-tone
+  2:          8/7             231.174094 septimal whole tone
+  3:          7/6             266.870906 septimal minor third
+  4:          6/5             315.641287 minor third
+  5:         49/40            351.338099 larger approximation to neutral third
+  6:          5/4             386.313714 major third
+  7:          4/3             498.044999 perfect fourth
+  8:          7/5             582.512193 septimal or Huygens' tritone, BP fourth
+  9:         10/7             617.487807 Euler's tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:          8/5             813.686286 minor sixth
+ 12:         49/30            849.383098 larger approximation to neutral sixth
+ 13:          5/3             884.358713 major sixth, BP sixth
+ 14:         12/7             933.129094 septimal major sixth
+ 15:          7/4             968.825906 harmonic seventh
+ 16:         49/25           1165.024385 BP eighth
+ 17:          2/1            1200.000000 octave
+|
+diamond_chess11.scl
+11-limit chessboard pattern diamond. OdC                                        
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         11/10            165.004228 4/5-tone, Ptolemy's second
+  2:          8/7             231.174094 septimal whole tone
+  3:          6/5             315.641287 minor third
+  4:         11/9             347.407941 undecimal neutral third
+  5:          9/7             435.084095 septimal major third, BP third
+  6:          4/3             498.044999 perfect fourth
+  7:         11/8             551.317942 undecimal semi-augmented fourth
+  8:          7/5             582.512193 septimal or Huygens' tritone, BP fourth
+  9:         10/7             617.487807 Euler's tritone
+ 10:         16/11            648.682058 undecimal semi-diminished fifth
+ 11:          3/2             701.955001 perfect fifth
+ 12:         14/9             764.915905 septimal minor sixth
+ 13:         18/11            852.592059 undecimal neutral sixth
+ 14:          5/3             884.358713 major sixth, BP sixth
+ 15:          7/4             968.825906 harmonic seventh
+ 16:         20/11           1034.995772 large minor seventh
+ 17:          2/1            1200.000000 octave
+|
+dow_low.scl
+Lowest octave of Dowlands lute tuning, strings 1,2,3. 1/1=G. (1610)             
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         33/31            108.237371
+  2:          9/8             203.910002 major whole tone
+  3:         33/28            284.447037 undecimal minor third
+  4:        264/211           387.953917
+  5:          4/3             498.044999 perfect fourth
+  6:         24/17            596.999591 1st septendecimal tritone
+  7:         44/31            606.282370
+  8:          3/2             701.955001 perfect fifth
+  9:         11/7             782.492036 undecimal augmented fifth
+ 10:         99/62            810.192372
+ 11:        352/211           885.998916
+ 12:         27/16            905.865003 Pythagorean major sixth
+ 13:         99/56            986.402038
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         32/17           1095.044590 17th subharmonic
+ 16:        176/93           1104.327369
+ 17:          2/1            1200.000000 octave
+|
+dwarf17marv.scl
+Semimarvelous dwarf: 1/4 kleismic dwarf(<17 27 40|)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         68.745 cents      68.744546
+  2:        115.587 cents     115.587047
+  3:        184.332 cents     184.331593
+  4:        268.799 cents     268.798786
+  5:        315.641 cents     315.641287
+  6:        384.386 cents     384.385833
+  7:        499.973 cents     499.972880
+  8:        568.717 cents     568.717426
+  9:        615.560 cents     615.559927
+ 10:        700.027 cents     700.027120
+ 11:        768.772 cents     768.771666
+ 12:        815.614 cents     815.614167
+ 13:        884.359 cents     884.358713
+ 14:        953.103 cents     953.103259
+ 15:        999.946 cents     999.945760
+ 16:       1084.413 cents    1084.412953
+ 17:          2/1            1200.000000 octave
+|
+dwarf17marveq.scl
+Semimarvelous dwarf: equal beating dwarf(<17 27 40|)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         70.248 cents      70.247930
+  2:        115.132 cents     115.131957
+  3:        185.380 cents     185.379887
+  4:        269.907 cents     269.906701
+  5:        314.791 cents     314.790728
+  6:        385.039 cents     385.038658
+  7:        500.171 cents     500.170615
+  8:        570.419 cents     570.418545
+  9:        615.303 cents     615.302572
+ 10:        699.829 cents     699.829385
+ 11:        770.077 cents     770.077316
+ 12:        814.961 cents     814.961342
+ 13:        885.209 cents     885.209272
+ 14:        955.457 cents     955.457203
+ 15:       1000.341 cents    1000.341229
+ 16:       1084.868 cents    1084.868043
+ 17:          2/1            1200.000000 octave
+|
+fj-17tet.scl
+Franck Jedrzejewski continued fractions approx. of 17-tet 
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         25/24             70.672427 classic chromatic semitone, minor chroma
+  2:         51/47            141.403788
+  3:         26/23            212.253315
+  4:         93/79            282.453676
+  5:         38/31            352.477444
+  6:         23/18            424.364346 vicesimotertial major third
+  7:        145/109           494.069718
+  8:         97/70            564.755790
+  9:         10/7             617.487807 Euler's tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:         83/53            776.542772
+ 12:         31/19            847.522556
+ 13:         17/10            918.641696 septendecimal diminished seventh
+ 14:         23/13            987.746685
+ 15:         59/32           1059.171659
+ 16:         48/25           1129.327573 classic diminished octave
+ 17:          2/1            1200.000000 octave
+|
+freivald11.scl
+Jake Freivald, scale derived mostly from elevens (2011)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         33/32             53.272943 undecimal comma, al-Farabi's 1/4-tone
+  2:         12/11            150.637059 3/4-tone, undecimal neutral second
+  3:         25/22            221.309485 undecimal acute whole tone
+  4:         33/28            284.447037 undecimal minor third
+  5:         11/9             347.407941 undecimal neutral third
+  6:         14/11            417.507964 undecimal diminished fourth or major third
+  7:          4/3             498.044999 perfect fourth
+  8:          7/5             582.512193 septimal or Huygens' tritone, BP fourth
+  9:         16/11            648.682058 undecimal semi-diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         11/7             782.492036 undecimal augmented fifth
+ 12:         18/11            852.592059 undecimal neutral sixth
+ 13:         56/33            915.552963
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 16:         21/11           1119.462965 undecimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+freivald_sup.scl
+Jake Freivald, 4/3 divided into 7 superparticulars, repeated at 3/2, and the 4/3-3/2 divide split into 25/24, 26/25, 27/26
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         22/21             80.537035 undecimal minor semitone
+  2:         23/21            157.493440
+  3:          8/7             231.174094 septimal whole tone
+  4:         25/21            301.846520 BP second, quasi-equal minor third
+  5:         26/21            369.746754
+  6:          9/7             435.084095 septimal major third, BP third
+  7:          4/3             498.044999 perfect fourth
+  8:         25/18            568.717426 classic augmented fourth
+  9:         13/9             636.617660 tridecimal diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         11/7             782.492036 undecimal augmented fifth
+ 12:         23/14            859.448441
+ 13:         12/7             933.129094 septimal major sixth
+ 14:         25/14           1003.801521 middle minor seventh
+ 15:         13/7            1071.701755 16/3-tone
+ 16:         27/14           1137.039096 septimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+grady_centaur17.scl
+17-tone extension of Centaur, Kraig Grady & Terumi Narushima (2012)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         21/20             84.467193 minor semitone
+  2:         15/14            119.442808 major diatonic semitone
+  3:          9/8             203.910002 major whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:         49/40            351.338099 larger approximation to neutral third
+  6:          5/4             386.313714 major third
+  7:          4/3             498.044999 perfect fourth
+  8:          7/5             582.512193 septimal or Huygens' tritone, BP fourth
+  9:         10/7             617.487807 Euler's tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:         49/30            849.383098 larger approximation to neutral sixth
+ 13:          5/3             884.358713 major sixth, BP sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:        147/80           1053.293100
+ 16:         15/8            1088.268715 classic major seventh
+ 17:          2/1            1200.000000 octave
+|
+h17_32.scl
+17-tET harmonic approximation, fundamental=32
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         33/32             53.272943 undecimal comma, al-Farabi's 1/4-tone
+  2:         35/32            155.139620 septimal neutral second
+  3:          9/8             203.910002 major whole tone
+  4:         19/16            297.513016 19th harmonic
+  5:         39/32            342.482663 39th harmonic, Zalzal wosta of Ibn Sina
+  6:         41/32            429.062406
+  7:         43/32            511.517706
+  8:         11/8             551.317942 undecimal semi-augmented fourth
+  9:         23/16            628.274347 23rd harmonic
+ 10:          3/2             701.955001 perfect fifth
+ 11:         25/16            772.627428 classic augmented fifth
+ 12:         13/8             840.527662 tridecimal neutral sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         57/32            999.468017 undevicesimal minor seventh
+ 15:         59/32           1059.171659
+ 16:         61/32           1116.884805
+ 17:          2/1            1200.000000 octave
+|
+iter10.scl
+Iterated 5/2 scale, IE=5/2, PD=4, SD=3
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        359/339            99.238285
+  2:        194/173           198.341537
+  3:         91/80            223.039854
+  4:        607/526           247.960460
+  5:         19/16            297.513016 19th harmonic
+  6:        127/101           396.567845
+  7:        339/262           446.062154
+  8:        241/181           495.652139
+  9:        141/100           594.834195
+ 10:        117/74            793.093625
+ 11:         72/43            892.392296
+ 12:        211/119           991.537710
+ 13:        167/84           1189.664244
+ 14:        178/87           1239.347922
+ 15:         40/19           1288.800698 small undevicesimal semitone +1 octave
+ 16:        136/61           1388.070604
+ 17:          5/2            1586.313714 major 10th
+|
+iter17.scl
+Binary E Scale #2
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        108.202 cents     108.202130
+  2:        216.404 cents     216.404260
+  3:        243.455 cents     243.454790
+  4:        270.505 cents     270.505320
+  5:        324.606 cents     324.606380
+  6:        432.809 cents     432.808510
+  7:        486.910 cents     486.909580
+  8:        541.011 cents     541.010640
+  9:        649.213 cents     649.212770
+ 10:        865.617 cents     865.617020
+ 11:        973.819 cents     973.819150
+ 12:       1082.021 cents    1082.021280
+ 13:       1298.426 cents    1298.425540
+ 14:       1352.527 cents    1352.526600
+ 15:       1406.628 cents    1406.627660
+ 16:       1514.830 cents    1514.829790
+ 17:       1731.234 cents    1731.234050
+|
+iter26.scl
+E Scale                                                                         
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         54/53             32.360457
+  2:         41/39             86.579743
+  3:         19/18             93.603014 undevicesimal semitone
+  4:         50/47            107.120806
+  5:         51/47            141.403788
+  6:         63/55            235.104252
+  7:         22/19            253.804926
+  8:         13/11            289.209719 tridecimal minor third
+  9:         91/73            381.564098
+ 10:         13/9             636.617660 tridecimal diminished fifth
+ 11:         76/51            690.602606
+ 12:         74/47            785.837417
+ 13:         31/17           1040.080163
+ 14:         80/43           1074.796008
+ 15:         25/13           1132.099766
+ 16:         19/9            1293.603014 undevicesimal semitone +1 octave
+ 17:         87/32           1731.532195
+|
+iter4.scl
+Iterated 5/2 scale, IE=5/2, PD=4, SD=3
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        216/211            40.545976
+  2:        123/116           101.440212
+  3:        209/196           111.179146
+  4:         57/53            125.963472
+  5:         67/61            162.422223
+  6:         22/19            253.804926
+  7:        128/109           278.178810
+  8:        343/286           314.632115
+  9:        110/87            406.099461
+ 10:         88/61            634.433137
+ 11:        133/89            695.458805
+ 12:        115/73            786.798590
+ 13:        142/79           1015.159646
+ 14:        123/67           1051.710378
+ 15:        307/162          1106.693811
+ 16:        201/98           1243.610216
+ 17:          5/2            1586.313714 major 10th
+|
+ji_17.scl
+3 and 7 prime rational interpretation of 17-tET. OdC                            
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         28/27             62.960904 Archytas' 1/3-tone
+  2:        243/224           140.949098 Archytas' 2/3-tone
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:        896/729           357.095901
+  6:          9/7             435.084095 septimal major third, BP third
+  7:          4/3             498.044999 perfect fourth
+  8:        112/81            561.005903
+  9:         81/56            638.994097
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:        729/448           842.904099
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:        448/243          1059.050902
+ 16:         27/14           1137.039096 septimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+ji_17a.scl
+3, 5 and 11 prime rational interpretation of 17-tET, OdC                        
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         25/24             70.672427 classic chromatic semitone, minor chroma
+  2:         27/25            133.237575 large limma, BP small semitone, Zarlino semitone
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:         27/22            354.547060 neutral third, Zalzal wosta of al-Farabi
+  6:         32/25            427.372572 classic diminished fourth
+  7:          4/3             498.044999 perfect fourth
+  8:         25/18            568.717426 classic augmented fourth
+  9:         36/25            631.282574 classic diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         25/16            772.627428 classic augmented fifth
+ 12:         44/27            845.452940 neutral sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         50/27           1066.762425 grave major seventh
+ 16:         48/25           1129.327573 classic diminished octave
+ 17:          2/1            1200.000000 octave
+|
+ji_17b.scl
+Alt. 3, 5 and 11 prime rational interpretation of 17-tET, OdC
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         25/24             70.672427 classic chromatic semitone, minor chroma
+  2:         12/11            150.637059 3/4-tone, undecimal neutral second
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:         11/9             347.407941 undecimal neutral third
+  6:         32/25            427.372572 classic diminished fourth
+  7:          4/3             498.044999 perfect fourth
+  8:         11/8             551.317942 undecimal semi-augmented fourth
+  9:         16/11            648.682058 undecimal semi-diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         25/16            772.627428 classic augmented fifth
+ 12:         18/11            852.592059 undecimal neutral sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 16:         48/25           1129.327573 classic diminished octave
+ 17:          2/1            1200.000000 octave
+|
+laka-dwarf.scl
+Laka tempered (205-tET) dwarf(<17 27 40 48 59 63 70|)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         52.683 cents      52.682930
+  2:        105.366 cents     105.365850
+  3:        204.878 cents     204.878050
+  4:        245.854 cents     245.853660
+  5:        345.366 cents     345.365850
+  6:        386.341 cents     386.341460
+  7:        474.146 cents     474.146340
+  8:        550.244 cents     550.243900
+  9:        591.220 cents     591.219510
+ 10:        702.439 cents     702.439020
+ 11:        743.415 cents     743.414630
+ 12:        842.927 cents     842.926830
+ 13:        907.317 cents     907.317070
+ 14:        971.707 cents     971.707320
+ 15:       1047.805 cents    1047.804880
+ 16:       1088.780 cents    1088.780490
+ 17:          2/1            1200.000000 octave
+|
+lumma_17.scl
+Carl Lumma, intervals of attraction, minus inversions, trial and error (1999)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         11/10            165.004228 4/5-tone, Ptolemy's second
+  2:          9/8             203.910002 major whole tone
+  3:          7/6             266.870906 septimal minor third
+  4:         11/9             347.407941 undecimal neutral third
+  5:          5/4             386.313714 major third
+  6:          9/7             435.084095 septimal major third, BP third
+  7:         11/8             551.317942 undecimal semi-augmented fourth
+  8:          7/5             582.512193 septimal or Huygens' tritone, BP fourth
+  9:          3/2             701.955001 perfect fifth
+ 10:         11/7             782.492036 undecimal augmented fifth
+ 11:         13/8             840.527662 tridecimal neutral sixth
+ 12:          5/3             884.358713 major sixth, BP sixth
+ 13:          7/4             968.825906 harmonic seventh
+ 14:          9/5            1017.596288 just minor seventh, BP seventh
+ 15:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 16:         15/8            1088.268715 classic major seventh
+ 17:          2/1            1200.000000 octave
+|
+majmin.scl
+Malcolm & Marpurg 4 (Yamaha major & minor) mixed. Mersenne/Ban without D#
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         25/24             70.672427 classic chromatic semitone, minor chroma
+  2:         16/15            111.731285 minor diatonic semitone
+  3:         10/9             182.403712 minor whole tone
+  4:          9/8             203.910002 major whole tone
+  5:          6/5             315.641287 minor third
+  6:          5/4             386.313714 major third
+  7:          4/3             498.044999 perfect fourth
+  8:         25/18            568.717426 classic augmented fourth
+  9:         45/32            590.223716 diatonic tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:         25/16            772.627428 classic augmented fifth
+ 12:          8/5             813.686286 minor sixth
+ 13:          5/3             884.358713 major sixth, BP sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:          9/5            1017.596288 just minor seventh, BP seventh
+ 16:         15/8            1088.268715 classic major seventh
+ 17:          2/1            1200.000000 octave
+|
+marimba1.scl
+Marimba of the Bakwese, SW Belgian Congo (Zaire). 1/1=140.5 Hz                  
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        145.000 cents     145.000000
+  2:        346.000 cents     346.000000
+  3:        468.000 cents     468.000000
+  4:        609.000 cents     609.000000
+  5:        785.000 cents     785.000000
+  6:        966.000 cents     966.000000
+  7:       1123.000 cents    1123.000000
+  8:       1279.000 cents    1279.000000
+  9:       1474.000 cents    1474.000000
+ 10:       1580.000 cents    1580.000000
+ 11:       1772.000 cents    1772.000000
+ 12:       1952.000 cents    1952.000000
+ 13:       2146.000 cents    2146.000000
+ 14:       2344.000 cents    2344.000000
+ 15:       2438.000 cents    2438.000000
+ 16:       2674.000 cents    2674.000000
+ 17:       2780.000 cents    2780.000000
+|
+marimba2.scl
+Marimba of the Bakubu, S. Belgian Congo (Zaire). 1/1=141.5 Hz                   
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        112.000 cents     112.000000
+  2:        338.000 cents     338.000000
+  3:        469.000 cents     469.000000
+  4:        646.000 cents     646.000000
+  5:        826.000 cents     826.000000
+  6:        972.000 cents     972.000000
+  7:       1187.000 cents    1187.000000
+  8:       1352.000 cents    1352.000000
+  9:       1476.000 cents    1476.000000
+ 10:       1691.000 cents    1691.000000
+ 11:       1849.000 cents    1849.000000
+ 12:       2033.000 cents    2033.000000
+ 13:       2239.000 cents    2239.000000
+ 14:       2405.000 cents    2405.000000
+ 15:       2557.000 cents    2557.000000
+ 16:       2737.000 cents    2737.000000
+ 17:       2891.000 cents    2891.000000
+|
+mean17_17.scl
+4/17-comma meantone scale with split C#/Db, D#/Eb, F#/Gb, G#/Ab and A#/Bb
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         78.263 cents      78.262880
+  2:        115.527 cents     115.526510
+  3:        193.789 cents     193.789390
+  4:        272.052 cents     272.052280
+  5:        309.316 cents     309.315910
+  6:        387.579 cents     387.578790
+  7:        503.105 cents     503.105300
+  8:        581.368 cents     581.368180
+  9:        618.632 cents     618.631820
+ 10:        696.895 cents     696.894700
+ 11:        775.158 cents     775.157580
+ 12:        812.421 cents     812.421210
+ 13:        890.684 cents     890.684090
+ 14:        968.947 cents     968.946970
+ 15:       1006.211 cents    1006.210610
+ 16:       1084.473 cents    1084.473490
+ 17:          2/1            1200.000000 octave
+|
+meanquar_17.scl
+1/4-comma meantone scale with split C#/Db, D#/Eb, F#/Gb, G#/Ab and A#/Bb
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         76.049 cents      76.049000
+  2:        117.108 cents     117.107860
+  3:        193.157 cents     193.156860
+  4:        269.206 cents     269.205850
+  5:        310.265 cents     310.264710
+  6:          5/4             386.313714 major third
+  7:        503.422 cents     503.421570
+  8:        579.471 cents     579.470570
+  9:        620.529 cents     620.529430
+ 10:        696.578 cents     696.578430
+ 11:         25/16            772.627428 classic augmented fifth
+ 12:          8/5             813.686286 minor sixth
+ 13:        889.735 cents     889.735280
+ 14:        965.784 cents     965.784280
+ 15:       1006.843 cents    1006.843140
+ 16:       1082.892 cents    1082.892140
+ 17:          2/1            1200.000000 octave
+|
+meanschis_17.scl
+17-tone 1/8-schisma linear temperament
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         91.446 cents      91.446070
+  2:        182.892 cents     182.892140
+  3:        203.422 cents     203.421570
+  4:        294.868 cents     294.867640
+  5:          5/4             386.313714 major third
+  6:        406.843 cents     406.843140
+  7:        498.289 cents     498.289210
+  8:        589.735 cents     589.735290
+  9:        610.265 cents     610.264710
+ 10:        701.711 cents     701.710790
+ 11:        793.157 cents     793.156860
+ 12:        884.603 cents     884.602930
+ 13:        905.132 cents     905.132360
+ 14:        996.578 cents     996.578430
+ 15:       1088.025 cents    1088.024500
+ 16:       1108.554 cents    1108.553930
+ 17:          2/1            1200.000000 octave
+|
+parapyth17-7.scl
+2.3.7 transversal of parapyth17
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         28/27             62.960904 Archytas' 1/3-tone
+  2:       2187/2048          113.685006 apotome
+  3:          9/8             203.910002 major whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:        896/729           357.095901
+  6:         81/64            407.820003 Pythagorean major third
+  7:         21/16            470.780907 narrow fourth
+  8:        112/81            561.005903
+  9:        729/512           611.730005 Pythagorean tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:       3584/2187          855.140900
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:          7/41          -3060.236499
+ 15:        448/243          1059.050902
+ 16:        243/128          1109.775004 Pythagorean major seventh
+ 17:          2/1            1200.000000 octave
+|
+parapyth17trans.scl
+A JI transversal of parapyth17.scl for use in calculations. If you temper out 352/351 and 364/363 it becomes parapyth17
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         28/27             62.960904 Archytas' 1/3-tone
+  2:         14/13            128.298245 2/3-tone
+  3:          9/8             203.910002 major whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:         11/9             347.407941 undecimal neutral third
+  6:         14/11            417.507964 undecimal diminished fourth or major third
+  7:         21/16            470.780907 narrow fourth
+  8:         11/8             551.317942 undecimal semi-augmented fourth
+  9:         56/39            626.343244
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:         13/8             840.527662 tridecimal neutral sixth
+ 13:         22/13            910.790281 tridecimal major sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 16:         21/11           1119.462965 undecimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+parizek_ragipuq1.scl
+17-step ragisma pump, symmetric (7/6, 5/1, 2/7)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:          7/6             266.870906 septimal minor third
+  2:          1/3           -1901.955001 perfect 12th
+  3:          5/3             884.358713 major sixth, BP sixth
+  4:         35/18           1151.229619 septimal semi-diminished octave
+  5:          5/9           -1017.596288 just minor seventh, BP seventh
+  6:         35/54           -750.725382 septimal semi-augmented fifth
+  7:        175/54           2035.588332
+  8:         25/27           -133.237575 large limma, BP small semitone, Zarlino semitone
+  9:        175/162           133.633331
+ 10:         25/81          -2035.192576 acute minor sixth +1 octave
+ 11:        125/81            751.121138
+ 12:        875/486          1017.992044
+ 13:        125/243         -1150.833863 octave - maximal diesis
+ 14:        875/1458         -883.962957
+ 15:       4375/1458         1902.350757
+ 16:        625/729          -266.475150 two (large limma, BP small semitone, Zarlino semitone)
+ 17:       4375/4374            0.395756 ragisma
+|
+parizekhex.scl
+Union of the parizek-miller wakalix hexagon, itself a 17c wakalix
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         21/20             84.467193 minor semitone
+  2:         15/14            119.442808 major diatonic semitone
+  3:          9/8             203.910002 major whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:         25/21            301.846520 BP second, quasi-equal minor third
+  6:          5/4             386.313714 major third
+  7:         21/16            470.780907 narrow fourth
+  8:          7/5             582.512193 septimal or Huygens' tritone, BP fourth
+  9:         10/7             617.487807 Euler's tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:         63/40            786.422194 narrow minor sixth
+ 12:         45/28            821.397809 septimale wide minor sixth
+ 13:          5/3             884.358713 major sixth, BP sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:         25/14           1003.801521 middle minor seventh
+ 16:         15/8            1088.268715 classic major seventh
+ 17:          2/1            1200.000000 octave
+|
+pepper.scl
+Keenan Pepper's 17-tone jazz tuning, TL 07-06-2000
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         21/20             84.467193 minor semitone
+  2:         10/9             182.403712 minor whole tone
+  3:          9/8             203.910002 major whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:          5/4             386.313714 major third
+  6:         21/16            470.780907 narrow fourth
+  7:          4/3             498.044999 perfect fourth
+  8:         45/32            590.223716 diatonic tritone
+  9:          3/2             701.955001 perfect fifth
+ 10:         14/9             764.915905 septimal minor sixth
+ 11:          5/3             884.358713 major sixth, BP sixth
+ 12:         27/16            905.865003 Pythagorean major sixth
+ 13:          7/4             968.825906 harmonic seventh
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         15/8            1088.268715 classic major seventh
+ 16:         63/32           1172.735908 octave - septimal comma
+ 17:          2/1            1200.000000 octave
+|
+persian-far.scl
+Hormoz Farhat, average of observed Persian tar and sehtar tunings (1966)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         90.000 cents      90.000000
+  2:        135.000 cents     135.000000
+  3:        205.000 cents     205.000000
+  4:        295.000 cents     295.000000
+  5:        340.000 cents     340.000000
+  6:        410.000 cents     410.000000
+  7:        500.000 cents     500.000000
+  8:        565.000 cents     565.000000
+  9:        630.000 cents     630.000000
+ 10:        700.000 cents     700.000000
+ 11:        790.000 cents     790.000000
+ 12:        835.000 cents     835.000000
+ 13:        905.000 cents     905.000000
+ 14:        995.000 cents     995.000000
+ 15:       1040.000 cents    1040.000000
+ 16:       1110.000 cents    1110.000000
+ 17:          2/1            1200.000000 octave
+|
+persian-vaz.scl
+Vaziri's Persian tuning, using quartertones
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        100.000 cents     100.000000
+  2:        150.000 cents     150.000000
+  3:        200.000 cents     200.000000
+  4:        300.000 cents     300.000000
+  5:        350.000 cents     350.000000
+  6:        400.000 cents     400.000000
+  7:        500.000 cents     500.000000
+  8:        550.000 cents     550.000000
+  9:        650.000 cents     650.000000
+ 10:        700.000 cents     700.000000
+ 11:        800.000 cents     800.000000
+ 12:        850.000 cents     850.000000
+ 13:        900.000 cents     900.000000
+ 14:       1000.000 cents    1000.000000
+ 15:       1050.000 cents    1050.000000
+ 16:       1100.000 cents    1100.000000
+ 17:          2/1            1200.000000 octave
+|
+persian.scl
+Persian Tar Scale, from Dariush Anooshfar, TL 2-10-94
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        256/243            90.224996 limma, Pythagorean minor second
+  2:         27/25            133.237575 large limma, BP small semitone, Zarlino semitone
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:        243/200           337.147577 acute minor third
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:         25/18            568.717426 classic augmented fourth
+  9:         36/25            631.282574 classic diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:         81/50            835.192576 acute minor sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:        729/400          1039.102577 acute minor seventh
+ 16:        243/128          1109.775004 Pythagorean major seventh
+ 17:          2/1            1200.000000 octave
+|
+persian2.scl
+Traditional Persian scale, from Mark Rankin
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        256/243            90.224996 limma, Pythagorean minor second
+  2:         54/49            168.213190 Zalzal's mujannab
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:         27/22            354.547060 neutral third, Zalzal wosta of al-Farabi
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:       1024/729           588.269995 Pythagorean diminished fifth
+  9:         72/49            666.258189 Arabic lute grave fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:         18/11            852.592059 undecimal neutral sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:       4096/2187         1086.314994 Pythagorean diminished octave
+ 16:         96/49           1164.303188
+ 17:          2/1            1200.000000 octave
+|
+pipedum_17.scl
+245/243, 64/63, 525/512, Paul Erlich, 2001
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         36/35             48.770381 septimal diesis, 1/4-tone
+  2:         35/32            155.139620 septimal neutral second
+  3:          9/8             203.910002 major whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:        128/105           342.905379 septimal neutral third
+  6:          9/7             435.084095 septimal major third, BP third
+  7:          4/3             498.044999 perfect fourth
+  8:         48/35            546.815381 septimal semi-augmented fourth
+  9:         35/24            653.184619 septimal semi-diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:        105/64            857.094621 septimal neutral sixth
+ 13:         12/7             933.129094 septimal major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         64/35           1044.860380 septimal neutral seventh
+ 16:         35/18           1151.229619 septimal semi-diminished octave
+ 17:          2/1            1200.000000 octave
+|
+pipedum_17a.scl
+245/243, 525/512, 1728/1715, Paul Erlich, 2001
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         28/27             62.960904 Archytas' 1/3-tone
+  2:         35/32            155.139620 septimal neutral second
+  3:        245/216           218.100524
+  4:          7/6             266.870906 septimal minor third
+  5:        128/105           342.905379 septimal neutral third
+  6:          9/7             435.084095 septimal major third, BP third
+  7:          4/3             498.044999 perfect fourth
+  8:         48/35            546.815381 septimal semi-augmented fourth
+  9:         35/24            653.184619 septimal semi-diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:        105/64            857.094621 septimal neutral sixth
+ 13:         12/7             933.129094 septimal major sixth
+ 14:        432/245           981.899476
+ 15:         64/35           1044.860380 septimal neutral seventh
+ 16:         27/14           1137.039096 septimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+pipedum_17b.scl
+245/243, 64/63 comma, 25/24 chroma
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         81/80             21.506290 syntonic comma, Didymus comma
+  2:         35/32            155.139620 septimal neutral second
+  3:          9/8             203.910002 major whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:          5/4             386.313714 major third
+  6:         35/27            449.274618 9/4-tone, septimal semi-diminished fourth
+  7:         21/16            470.780907 narrow fourth
+  8:         45/32            590.223716 diatonic tritone
+  9:         35/24            653.184619 septimal semi-diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:          5/3             884.358713 major sixth, BP sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:         15/8            1088.268715 classic major seventh
+ 16:         35/18           1151.229619 septimal semi-diminished octave
+ 17:          2/1            1200.000000 octave
+|
+pipedum_17c.scl
+1605632/1594323, 177147/175616, Manuel Op de Coul, 2002
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:       6561/6272           77.988194
+  2:       7168/6561          153.185900
+  3:          8/7             231.174094 septimal whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:        896/729           357.095901
+  6:          9/7             435.084095 septimal major third, BP third
+  7:          4/3             498.044999 perfect fourth
+  8:       2187/1568          576.033193
+  9:         81/56            638.994097
+ 10:          3/2             701.955001 perfect fifth
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:       3584/2187          855.140900
+ 13:         12/7             933.129094 septimal major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:        729/392          1074.078192
+ 16:         27/14           1137.039096 septimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+pipedum_17d.scl
+243/242, 99/98, 64/63, Manuel Op de Coul, 2002
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         22/21             80.537035 undecimal minor semitone
+  2:         88/81            143.497939 2nd undecimal neutral second
+  3:          8/7             231.174094 septimal whole tone
+  4:         33/28            284.447037 undecimal minor third
+  5:         11/9             347.407941 undecimal neutral third
+  6:          9/7             435.084095 septimal major third, BP third
+  7:          4/3             498.044999 perfect fourth
+  8:         88/63            578.582034
+  9:         77/54            614.278846
+ 10:          3/2             701.955001 perfect fifth
+ 11:         11/7             782.492036 undecimal augmented fifth
+ 12:         44/27            845.452940 neutral sixth
+ 13:         12/7             933.129094 septimal major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 16:         27/14           1137.039096 septimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+pipedum_17e.scl
+245/243, 1728/1715, 32805/32768, Manuel Op de Coul, 2003
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         28/27             62.960904 Archytas' 1/3-tone
+  2:         35/32            155.139620 septimal neutral second
+  3:        245/216           218.100524
+  4:         32/27            294.134997 Pythagorean minor third
+  5:        315/256           359.049622
+  6:          9/7             435.084095 septimal major third, BP third
+  7:          4/3             498.044999 perfect fourth
+  8:       2835/2048          562.959624
+  9:         81/56            638.994097
+ 10:        245/162           716.145523
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:        105/64            857.094621 septimal neutral sixth
+ 13:        245/144           920.055525
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:        945/512          1061.004623
+ 16:         27/14           1137.039096 septimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+pipedum_17f.scl
+243/242, 8192/8019, Manuel Op de Coul
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         33/32             53.272943 undecimal comma, al-Farabi's 1/4-tone
+  2:         12/11            150.637059 3/4-tone, undecimal neutral second
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:         11/9             347.407941 undecimal neutral third
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:         11/8             551.317942 undecimal semi-augmented fourth
+  9:         16/11            648.682058 undecimal semi-diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:         18/11            852.592059 undecimal neutral sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 16:         64/33           1146.727057 33rd subharmonic
+ 17:          2/1            1200.000000 octave
+|
+pipedum_17g.scl
+243/242, 896/891, 99/98, Manuel Op de Coul
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         22/21             80.537035 undecimal minor semitone
+  2:         12/11            150.637059 3/4-tone, undecimal neutral second
+  3:          8/7             231.174094 septimal whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:         11/9             347.407941 undecimal neutral third
+  6:          9/7             435.084095 septimal major third, BP third
+  7:          4/3             498.044999 perfect fourth
+  8:         11/8             551.317942 undecimal semi-augmented fourth
+  9:         16/11            648.682058 undecimal semi-diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:         18/11            852.592059 undecimal neutral sixth
+ 13:         12/7             933.129094 septimal major sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 16:         21/11           1119.462965 undecimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+poole-rod.scl
+Rod Poole's 13-limit scale
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         33/32             53.272943 undecimal comma, al-Farabi's 1/4-tone
+  2:         13/12            138.572661 tridecimal 2/3-tone
+  3:          9/8             203.910002 major whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:         11/9             347.407941 undecimal neutral third
+  6:         14/11            417.507964 undecimal diminished fourth or major third
+  7:          4/3             498.044999 perfect fourth
+  8:         11/8             551.317942 undecimal semi-augmented fourth
+  9:         13/9             636.617660 tridecimal diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:         44/27            845.452940 neutral sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 16:         21/11           1119.462965 undecimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+pump17.scl
+Marvel tempered comma pump scale in 197-tET
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        115.736 cents     115.736040
+  2:        201.015 cents     201.015230
+  3:        268.020 cents     268.020300
+  4:        316.751 cents     316.751270
+  5:        383.756 cents     383.756350
+  6:        432.487 cents     432.487310
+  7:        499.492 cents     499.492390
+  8:        584.772 cents     584.771570
+  9:        700.508 cents     700.507610
+ 10:        767.513 cents     767.512690
+ 11:        816.244 cents     816.243650
+ 12:        883.249 cents     883.248730
+ 13:        931.980 cents     931.979700
+ 14:       1017.259 cents    1017.258880
+ 15:       1084.264 cents    1084.263960
+ 16:       1132.995 cents    1132.994920
+ 17:          2/1            1200.000000 octave
+|
+pyclesfip17.scl
+9-limit 15 cent lesfip derived from Pycnic[17]
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         66.731 cents      66.731230
+  2:        130.994 cents     130.993600
+  3:        190.932 cents     190.932240
+  4:        261.572 cents     261.571680
+  5:        321.510 cents     321.510310
+  6:        385.773 cents     385.772680
+  7:        452.504 cents     452.503920
+  8:        571.995 cents     571.994860
+  9:        629.681 cents     629.681330
+ 10:        695.448 cents     695.448100
+ 11:        764.801 cents     764.800770
+ 12:        826.252 cents     826.251960
+ 13:        887.703 cents     887.703140
+ 14:        957.056 cents     957.055820
+ 15:       1022.823 cents    1022.822590
+ 16:       1080.509 cents    1080.509060
+ 17:          2/1            1200.000000 octave
+|
+pyth_17.scl
+17-tone Pythagorean scale. Used in Persian music
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        256/243            90.224996 limma, Pythagorean minor second
+  2:       2187/2048          113.685006 apotome
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:      19683/16384         317.595008 Pythagorean augmented second
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:       1024/729           588.269995 Pythagorean diminished fifth
+  9:        729/512           611.730005 Pythagorean tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:       6561/4096          815.640007 Pythagorean augmented fifth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:      59049/32768        1019.550009 Pythagorean augmented sixth
+ 16:        243/128          1109.775004 Pythagorean major seventh
+ 17:          2/1            1200.000000 octave
+|
+pyth_17s.scl
+Schismatically altered 17-tone Pythagorean scale
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        256/243            90.224996 limma, Pythagorean minor second
+  2:         16/15            111.731285 minor diatonic semitone
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:          6/5             315.641287 minor third
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:       1024/729           588.269995 Pythagorean diminished fifth
+  9:         64/45            609.776284 2nd tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:          8/5             813.686286 minor sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:          9/5            1017.596288 just minor seventh, BP seventh
+ 16:        243/128          1109.775004 Pythagorean major seventh
+ 17:          2/1            1200.000000 octave
+|
+ragipu17.scl
+17-step ragisma pump (7/6, 5/1, 2/7)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:          7/6             266.870906 septimal minor third
+  2:          1/3           -1901.955001 perfect 12th
+  3:          5/3             884.358713 major sixth, BP sixth
+  4:         35/18           1151.229619 septimal semi-diminished octave
+  5:          5/9           -1017.596288 just minor seventh, BP seventh
+  6:         35/54           -750.725382 septimal semi-augmented fifth
+  7:          5/27          -2919.551289 acute fourth +2 octaves
+  8:         25/27           -133.237575 large limma, BP small semitone, Zarlino semitone
+  9:        175/162           133.633331
+ 10:         25/81          -2035.192576 acute minor sixth +1 octave
+ 11:        125/81            751.121138
+ 12:        875/486          1017.992044
+ 13:        125/243         -1150.833863 octave - maximal diesis
+ 14:        875/1458         -883.962957
+ 15:        125/729         -3052.788864
+ 16:        875/4374        -2785.917958
+ 17:       4375/4374            0.395756 ragisma
+|
+rectsp6a.scl
+Rectangle minimal beats spectrum of order 6 union with inversion                
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         12/11            150.637059 3/4-tone, undecimal neutral second
+  2:         10/9             182.403712 minor whole tone
+  3:          8/7             231.174094 septimal whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:          6/5             315.641287 minor third
+  6:          5/4             386.313714 major third
+  7:          4/3             498.044999 perfect fourth
+  8:          7/5             582.512193 septimal or Huygens' tritone, BP fourth
+  9:         10/7             617.487807 Euler's tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:          8/5             813.686286 minor sixth
+ 12:          5/3             884.358713 major sixth, BP sixth
+ 13:         12/7             933.129094 septimal major sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:          9/5            1017.596288 just minor seventh, BP seventh
+ 16:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 17:          2/1            1200.000000 octave
+|
+reinhardj17.scl
+Johnny Reinhard's Harmonic-17 tuning for "Tresspass" (1998)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         18/17             98.954592 Arabic lute index finger
+  2:         17/16            104.955410 17th harmonic
+  3:         34/31            159.919837
+  4:         19/17            192.557607 quasi-meantone
+  5:         17/15            216.686695 septendecimal whole tone
+  6:         20/17            281.358304 septendecimal augmented second
+  7:         17/14            336.129503 supraminor third
+  8:         22/17            446.362533
+  9:         17/13            464.427748
+ 10:         24/17            596.999591 1st septendecimal tritone
+ 11:         26/17            735.572252
+ 12:         17/11            753.637467
+ 13:         28/17            863.870497 submajor sixth
+ 14:         17/10            918.641696 septendecimal diminished seventh
+ 15:         31/17           1040.080163
+ 16:         32/17           1095.044590 17th subharmonic
+ 17:          2/1            1200.000000 octave
+|
+safi_arabic.scl
+
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        256/243            90.224996 limma, Pythagorean minor second
+  2:      65536/59049         180.449991 Pythagorean diminished third
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:       8192/6561          384.359993 Pythagorean diminished fourth
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:       1024/729           588.269995 Pythagorean diminished fifth
+  9:     262144/177147        678.494990 Pythagorean diminished sixth
+ 10:          3/2             701.955001 perfect fifth
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:      32768/19683         882.404992 Pythagorean diminished seventh
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:       4096/2187         1086.314994 Pythagorean diminished octave
+ 16:    1048576/531441       1176.539990 Pythagorean diminished ninth
+ 17:          2/1            1200.000000 octave
+|
+safi_arabic_s.scl
+Schismatically altered Arabic 17-tone Pythagorean mode
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        256/243            90.224996 limma, Pythagorean minor second
+  2:         10/9             182.403712 minor whole tone
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:          5/4             386.313714 major third
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:         45/32            590.223716 diatonic tritone
+  9:         40/27            680.448711 grave fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:          5/3             884.358713 major sixth, BP sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         15/8            1088.268715 classic major seventh
+ 16:        160/81           1178.493710 octave - syntonic comma
+ 17:          2/1            1200.000000 octave
+|
+sauveur_17.scl
+Sauveur's oriental system, aft. Kitab al-adwar (Bagdad 1294) by Safi al-Din     
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        256/243            90.224996 limma, Pythagorean minor second
+  2:      65536/59049         180.449991 Pythagorean diminished third
+  3:          9/8             203.910002 major whole tone
+  4:         32/27            294.134997 Pythagorean minor third
+  5:       8192/6561          384.359993 Pythagorean diminished fourth
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:       1024/729           588.269995 Pythagorean diminished fifth
+  9:        729/512           611.730005 Pythagorean tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:        128/81            792.179997 Pythagorean minor sixth
+ 12:       6561/4096          815.640007 Pythagorean augmented fifth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:       4096/2187         1086.314994 Pythagorean diminished octave
+ 16:        243/128          1109.775004 Pythagorean major seventh
+ 17:          2/1            1200.000000 octave
+|
+schisynch17.scl
+Schismatic[17] in synch (brat=-1) tuning
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         91.361 cents      91.360882
+  2:        182.722 cents     182.721764
+  3:        203.456 cents     203.455647
+  4:        294.817 cents     294.816529
+  5:        386.177 cents     386.177411
+  6:        406.911 cents     406.911294
+  7:        498.272 cents     498.272176
+  8:        589.633 cents     589.633058
+  9:        680.994 cents     680.993940
+ 10:        701.728 cents     701.727824
+ 11:        793.089 cents     793.088706
+ 12:        884.450 cents     884.449587
+ 13:        905.183 cents     905.183471
+ 14:        996.544 cents     996.544353
+ 15:       1087.905 cents    1087.905235
+ 16:       1108.639 cents    1108.639118
+ 17:          2/1            1200.000000 octave
+|
+schulter_17.scl
+Neo-Gothic well-temperament (14:11, 9:7 hypermeantone fifths) TL 04-09-2000
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        126/121            70.100023
+  2:        130.639 cents     130.639000
+  3:        208.754 cents     208.754000
+  4:        286.869 cents     286.869000
+  5:        343.787 cents     343.787000
+  6:         14/11            417.507964 undecimal diminished fourth or major third
+  7:        495.623 cents     495.623000
+  8:        561.329 cents     561.329000
+  9:        626.262 cents     626.262000
+ 10:        704.377 cents     704.377000
+ 11:        778.871 cents     778.871000
+ 12:        196/121           835.015928 two (undecimal diminished fourth or major third)
+ 13:        913.131 cents     913.131000
+ 14:        991.246 cents     991.246000
+ 15:       1052.558 cents    1052.558000
+ 16:       1121.885 cents    1121.885000
+ 17:          2/1            1200.000000 octave
+|
+schulter_ham.scl
+New rational tuning of "Hammond organ type", TL 01-03-2002
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         25/24             70.672427 classic chromatic semitone, minor chroma
+  2:        243/224           140.949098 Archytas' 2/3-tone
+  3:         26/23            212.253315
+  4:         20/17            281.358304 septendecimal augmented second
+  5:         38/31            352.477444
+  6:         23/18            424.364346 vicesimotertial major third
+  7:        141/106           493.957077
+  8:         18/13            563.382340 tridecimal augmented fourth
+  9:         13/9             636.617660 tridecimal diminished fifth
+ 10:        212/141           706.042923
+ 11:         36/23            775.635654
+ 12:         31/19            847.522556
+ 13:         17/10            918.641696 septendecimal diminished seventh
+ 14:         23/13            987.746685
+ 15:        448/243          1059.050902
+ 16:         48/25           1129.327573 classic diminished octave
+ 17:          2/1            1200.000000 octave
+|
+schulter_jot17a.scl
+Just octachord tuning 4:3-9:8-4:3 division, 17 steps (7 + 3 + 7), Bb-Bb
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         28/27             62.960904 Archytas' 1/3-tone
+  2:         14/13            128.298245 2/3-tone
+  3:         44/39            208.835280
+  4:          7/6             266.870906 septimal minor third
+  5:         28/23            340.551559
+  6:         14/11            417.507964 undecimal diminished fourth or major third
+  7:          4/3             498.044999 perfect fourth
+  8:        112/81            561.005903
+  9:         56/39            626.343244
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:         21/13            830.253246
+ 13:         22/13            910.790281 tridecimal major sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:         42/23           1042.506560
+ 16:         21/11           1119.462965 undecimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+schulter_jot17bb.scl
+Just octachord Tuning (Bb-Eb, F-Bb), 896:891 divided into 1792:1787:1782
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         28/27             62.960904 Archytas' 1/3-tone
+  2:         14/13            128.298245 2/3-tone
+  3:       2016/1787          208.747205
+  4:          7/6             266.870906 septimal minor third
+  5:         28/23            340.551559
+  6:         14/11            417.507964 undecimal diminished fourth or major third
+  7:          4/3             498.044999 perfect fourth
+  8:        112/81            561.005903
+  9:         56/39            626.343244
+ 10:          3/2             701.955001 perfect fifth
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:         21/13            830.253246
+ 13:       3024/1787          910.702206
+ 14:          7/4             968.825906 harmonic seventh
+ 15:         42/23           1042.506560
+ 16:         21/11           1119.462965 undecimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+schulter_jwt17.scl
+"Just well-tuned 17" circulating system
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        126/121            70.100023
+  2:        109/101           131.967410
+  3:         44/39            208.835280
+  4:         33/28            284.447037 undecimal minor third
+  5:         11/9             347.407941 undecimal neutral third
+  6:         14/11            417.507964 undecimal diminished fourth or major third
+  7:        117/88            493.119721
+  8:         18/13            563.382340 tridecimal augmented fourth
+  9:         23/16            628.274347 23rd harmonic
+ 10:        176/117           706.880279
+ 11:        224/143           776.980302
+ 12:         13/8             840.527662 tridecimal neutral sixth
+ 13:         56/33            915.552963
+ 14:         23/13            987.746685
+ 15:         81/44           1056.502061 2nd undecimal neutral seventh
+ 16:        224/117          1124.388243
+ 17:          2/1            1200.000000 octave
+|
+schulter_met24-semineutral17_F#.scl
+17-CS semineutral sixth from two large major thirds (~63:81:104)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         57.422 cents      57.421870
+  2:        139.453 cents     139.453130
+  3:        207.422 cents     207.421870
+  4:        264.844 cents     264.843750
+  5:        370.312 cents     370.312500
+  6:        427.734 cents     427.734370
+  7:        496.875 cents     496.875000
+  8:        577.734 cents     577.734380
+  9:        635.156 cents     635.156250
+ 10:        704.297 cents     704.296870
+ 11:        761.719 cents     761.718750
+ 12:        867.188 cents     867.187500
+ 13:        924.609 cents     924.609370
+ 14:        992.578 cents     992.578120
+ 15:       1074.609 cents    1074.609370
+ 16:       1132.031 cents    1132.031250
+ 17:          2/1            1200.000000 octave
+|
+schulter_semineutral36.scl
+Semineutral tuning in 36-tET, 0-433.33-866.67 cents
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         66.667 cents      66.666670
+  2:        133.333 cents     133.333330
+  3:        200.000 cents     200.000000
+  4:        266.667 cents     266.666670
+  5:        366.667 cents     366.666660
+  6:        433.333 cents     433.333330
+  7:        500.000 cents     500.000000
+  8:        566.667 cents     566.666670
+  9:        633.333 cents     633.333330
+ 10:        700.000 cents     700.000000
+ 11:        766.667 cents     766.666670
+ 12:        866.667 cents     866.666670
+ 13:        933.333 cents     933.333330
+ 14:       1000.000 cents    1000.000000
+ 15:       1066.667 cents    1066.666670
+ 16:       1133.333 cents    1133.333330
+ 17:          2/1            1200.000000 octave
+|
+schulter_shur17.scl
+Peppermint 17-note thirdtone set for Persian dastgah-ha
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         69.990 cents      69.989550
+  2:        128.669 cents     128.669240
+  3:        208.191 cents     208.191210
+  4:        287.713 cents     287.713180
+  5:        357.703 cents     357.702730
+  6:        416.382 cents     416.382430
+  7:        495.904 cents     495.904390
+  8:        565.894 cents     565.893950
+  9:        624.574 cents     624.573640
+ 10:        704.096 cents     704.095610
+ 11:        774.085 cents     774.085160
+ 12:        832.765 cents     832.764850
+ 13:        912.287 cents     912.286820
+ 14:        991.809 cents     991.808790
+ 15:       1061.798 cents    1061.798340
+ 16:       1120.478 cents    1120.478030
+ 17:          2/1            1200.000000 octave
+|
+schulter_turquoise17-104ed2.scl
+Turquoise 17 in 104-tET, ~33:36:39:42:44 at steps 0 7 10
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         69.231 cents      69.230770
+  2:        150.000 cents     150.000000
+  3:        207.692 cents     207.692310
+  4:        288.462 cents     288.461540
+  5:        357.692 cents     357.692310
+  6:        415.385 cents     415.384620
+  7:        496.154 cents     496.153850
+  8:        565.385 cents     565.384620
+  9:        646.154 cents     646.153850
+ 10:        703.846 cents     703.846160
+ 11:        784.615 cents     784.615390
+ 12:        853.846 cents     853.846160
+ 13:        911.538 cents     911.538460
+ 14:        992.308 cents     992.307690
+ 15:       1061.538 cents    1061.538460
+ 16:       1119.231 cents    1119.230770
+ 17:          2/1            1200.000000 octave
+|
+schulter_turquoise17.scl
+Turquoise 17 in 1024-tET, ~33:36:39:42:44 at steps 0 7 10
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         70.312 cents      70.312490
+  2:        151.172 cents     151.171870
+  3:        208.594 cents     208.593750
+  4:        289.453 cents     289.453130
+  5:        358.594 cents     358.593750
+  6:        416.016 cents     416.015630
+  7:        496.875 cents     496.875000
+  8:        566.016 cents     566.015620
+  9:        646.875 cents     646.875000
+ 10:        704.297 cents     704.296880
+ 11:        785.156 cents     785.156250
+ 12:        854.297 cents     854.296870
+ 13:        911.719 cents     911.718750
+ 14:        992.578 cents     992.578120
+ 15:       1061.719 cents    1061.718750
+ 16:       1119.141 cents    1119.140630
+ 17:          2/1            1200.000000 octave
+|
+secor17htt1.scl
+George Secor's 17-tone high-tolerance temperament subset #1 on C (5/4 & 7/4 exact)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         30.089 cents      30.088780
+  2:        140.196 cents     140.196330
+  3:        207.157 cents     207.157390
+  4:        265.247 cents     265.247190
+  5:        347.354 cents     347.353720
+  6:          5/4             386.313714 major third
+  7:        496.421 cents     496.421310
+  8:        554.511 cents     554.511110
+  9:        612.601 cents     612.600910
+ 10:        703.579 cents     703.578690
+ 11:        733.667 cents     733.667470
+ 12:        843.775 cents     843.775020
+ 13:        882.735 cents     882.735060
+ 14:          7/4             968.825906 harmonic seventh
+ 15:       1050.932 cents    1050.932410
+ 16:       1089.892 cents    1089.892450
+ 17:          2/1            1200.000000 octave
+|
+secor17htt2.scl
+George Secor's 17-tone high-tolerance temperament subset #2 on Eo (5/4 & 7/4 exact)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         30.089 cents      30.088780
+  2:        116.180 cents     116.179600
+  3:        207.157 cents     207.157390
+  4:        237.246 cents     237.246170
+  5:        347.354 cents     347.353720
+  6:          5/4             386.313714 major third
+  7:        496.421 cents     496.421310
+  8:        554.511 cents     554.511110
+  9:        612.601 cents     612.600910
+ 10:        703.579 cents     703.578690
+ 11:        733.667 cents     733.667470
+ 12:        843.775 cents     843.775020
+ 13:        910.736 cents     910.736080
+ 14:          7/4             968.825906 harmonic seventh
+ 15:       1050.932 cents    1050.932410
+ 16:       1089.892 cents    1089.892450
+ 17:          2/1            1200.000000 octave
+|
+secor17htt3.scl
+George Secor's 17-tone high-tolerance temperament subset #3 on G (5/4 & 7/4 exact)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         58.090 cents      58.089800
+  2:        116.180 cents     116.179600
+  3:        207.157 cents     207.157390
+  4:        237.246 cents     237.246170
+  5:        347.354 cents     347.353720
+  6:          5/4             386.313714 major third
+  7:        472.405 cents     472.404580
+  8:        554.511 cents     554.511110
+  9:        593.471 cents     593.471140
+ 10:        703.579 cents     703.578690
+ 11:        733.667 cents     733.667470
+ 12:        843.775 cents     843.775020
+ 13:        910.736 cents     910.736080
+ 14:          7/4             968.825906 harmonic seventh
+ 15:       1050.932 cents    1050.932410
+ 16:       1089.892 cents    1089.892450
+ 17:          2/1            1200.000000 octave
+|
+secor17htt4.scl
+George Secor's 17-tone high-tolerance temperament subset #4 on Bo (5/4 & 7/4 exact)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         58.090 cents      58.089800
+  2:        116.180 cents     116.179600
+  3:        207.157 cents     207.157390
+  4:        237.246 cents     237.246170
+  5:        347.354 cents     347.353720
+  6:        414.315 cents     414.314780
+  7:        472.405 cents     472.404580
+  8:        554.511 cents     554.511110
+  9:        593.471 cents     593.471140
+ 10:        703.579 cents     703.578690
+ 11:        733.667 cents     733.667470
+ 12:        819.758 cents     819.758300
+ 13:        910.736 cents     910.736080
+ 14:        940.825 cents     940.824860
+ 15:       1050.932 cents    1050.932410
+ 16:       1089.892 cents    1089.892450
+ 17:          2/1            1200.000000 octave
+|
+secor17wt.scl
+George Secor's well temperament with 5 pure 11/7 and 3 near just 11/6
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         66.741 cents      66.741200
+  2:        144.856 cents     144.856240
+  3:        214.441 cents     214.440900
+  4:        278.339 cents     278.338640
+  5:        353.610 cents     353.610230
+  6:        428.882 cents     428.881810
+  7:        492.780 cents     492.779550
+  8:        562.364 cents     562.364210
+  9:        640.479 cents     640.479250
+ 10:        707.220 cents     707.220450
+ 11:        771.118 cents     771.118190
+ 12:        849.233 cents     849.233240
+ 13:        921.661 cents     921.661360
+ 14:        985.559 cents     985.559100
+ 15:       1057.987 cents    1057.987220
+ 16:       1136.102 cents    1136.102260
+ 17:          2/1            1200.000000 octave
+|
+secor17zrt.scl
+George Secor's 17-tone Zany Rational Temperament (2012)
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        555/536            60.305725
+  2:        289/268           130.603790
+  3:         75/67            195.275400
+  4:        157/134           274.237870
+  5:        163/134           339.166757
+  6:       2015/1608          390.614919
+  7:        802/603           493.733081
+  8:        369/268           553.665379
+  9:       5075/3618          585.858497
+ 10:        401/268           697.643083
+ 11:        835/536           767.451836
+ 12:        869/536           836.547812
+ 13:       1010/603           892.950463
+ 14:       1064/603           983.121892
+ 15:        981/536          1046.424163
+ 16:         15/8            1088.268715 classic major seventh
+ 17:          2/1            1200.000000 octave
+|
+smithj17.scl
+Jon Lyle Smith 17-tone well temperament, MMM 12-2006
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         71.000 cents      71.000000
+  2:        137.000 cents     137.000000
+  3:        208.000 cents     208.000000
+  4:        288.000 cents     288.000000
+  5:        345.000 cents     345.000000
+  6:        416.000 cents     416.000000
+  7:        496.000 cents     496.000000
+  8:        567.000 cents     567.000000
+  9:        633.000 cents     633.000000
+ 10:        704.000 cents     704.000000
+ 11:        784.000 cents     784.000000
+ 12:        841.000 cents     841.000000
+ 13:        912.000 cents     912.000000
+ 14:        992.000 cents     992.000000
+ 15:       1049.000 cents    1049.000000
+ 16:       1120.000 cents    1120.000000
+ 17:          2/1            1200.000000 octave
+|
+starling17.scl
+Starling[17] hobbit <17 27 40 49| in <135 214 314 379| tuning
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         80.000 cents      80.000000
+  2:        106.667 cents     106.666670
+  3:        186.667 cents     186.666670
+  4:        311.111 cents     311.111110
+  5:        391.111 cents     391.111110
+  6:        417.778 cents     417.777780
+  7:        497.778 cents     497.777780
+  8:        577.778 cents     577.777780
+  9:        622.222 cents     622.222220
+ 10:        702.222 cents     702.222220
+ 11:        782.222 cents     782.222220
+ 12:        808.889 cents     808.888890
+ 13:        888.889 cents     888.888890
+ 14:       1013.333 cents    1013.333330
+ 15:       1093.333 cents    1093.333330
+ 16:       1120.000 cents    1120.000000
+ 17:          2/1            1200.000000 octave
+|
+temp17ebf.scl
+Cycle of 17 equal beating fifths                                                
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         70.136 cents      70.136380
+  2:        141.075 cents     141.074800
+  3:        212.792 cents     212.791680
+  4:        282.576 cents     282.576300
+  5:        353.173 cents     353.173070
+  6:        424.558 cents     424.558430
+  7:        494.033 cents     494.033330
+  8:        564.329 cents     564.329170
+  9:        635.422 cents     635.422400
+ 10:        707.289 cents     707.289470
+ 11:        777.214 cents     777.214380
+ 12:        847.947 cents     847.947410
+ 13:        919.465 cents     919.465010
+ 14:        989.063 cents     989.063470
+ 15:       1059.479 cents    1059.479370
+ 16:       1130.689 cents    1130.689170
+ 17:          2/1            1200.000000 octave
+|
+temp17ebs.scl
+Cycle of 17 equal beating sevenths                                              
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         68.934 cents      68.933510
+  2:        142.632 cents     142.631860
+  3:        207.824 cents     207.823610
+  4:        277.675 cents     277.674540
+  5:        352.314 cents     352.313650
+  6:        418.304 cents     418.304440
+  7:        488.978 cents     488.978390
+  8:        564.461 cents     564.460590
+  9:        631.167 cents     631.166770
+ 10:        702.577 cents     702.576940
+ 11:        778.813 cents     778.812630
+ 12:        846.158 cents     846.157640
+ 13:        918.225 cents     918.224690
+ 14:        995.132 cents     995.132130
+ 15:       1063.046 cents    1063.046240
+ 16:       1135.698 cents    1135.698070
+ 17:          2/1            1200.000000 octave
+|
+temp17fo2.scl
+Fifth beats twice octave opposite
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         70.468 cents      70.467900
+  2:        140.936 cents     140.935790
+  3:        211.404 cents     211.403690
+  4:        281.872 cents     281.871580
+  5:        352.339 cents     352.339480
+  6:        422.807 cents     422.807370
+  7:        493.275 cents     493.275270
+  8:        563.743 cents     563.743160
+  9:        634.211 cents     634.211060
+ 10:        704.679 cents     704.678950
+ 11:        775.147 cents     775.146850
+ 12:        845.615 cents     845.614740
+ 13:        916.083 cents     916.082640
+ 14:        986.551 cents     986.550530
+ 15:       1057.018 cents    1057.018430
+ 16:       1127.486 cents    1127.486320
+ 17:       1197.954 cents    1197.954220
+|
+temp17nt.scl
+17-tone temperament with 27/22 neutral thirds
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         71.592 cents      71.591910
+  2:        139.771 cents     139.771320
+  3:        211.363 cents     211.363230
+  4:        282.955 cents     282.955150
+  5:         27/22            354.547060 neutral third, Zalzal wosta of al-Farabi
+  6:        422.726 cents     422.726470
+  7:        494.318 cents     494.318380
+  8:        565.910 cents     565.910300
+  9:        634.090 cents     634.089700
+ 10:        705.682 cents     705.681620
+ 11:        777.274 cents     777.273530
+ 12:         44/27            845.452940 neutral sixth
+ 13:        917.045 cents     917.044850
+ 14:        988.637 cents     988.636770
+ 15:       1060.229 cents    1060.228680
+ 16:       1128.408 cents    1128.408090
+ 17:          2/1            1200.000000 octave
+|
+temp17s.scl
+Margo Schulter, cycle of 17 fifths tempered by 2 schismas, TL 10-9-98
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         70.349 cents      70.349310
+  2:        141.037 cents     141.037100
+  3:        211.725 cents     211.724880
+  4:        282.413 cents     282.412670
+  5:        352.762 cents     352.761980
+  6:        423.450 cents     423.449770
+  7:        494.138 cents     494.137560
+  8:        564.487 cents     564.486870
+  9:        635.175 cents     635.174650
+ 10:        705.862 cents     705.862440
+ 11:        776.212 cents     776.211750
+ 12:        846.900 cents     846.899540
+ 13:        917.587 cents     917.587330
+ 14:        988.275 cents     988.275120
+ 15:       1058.624 cents    1058.624420
+ 16:       1129.312 cents    1129.312210
+ 17:          2/1            1200.000000 octave
+|
+triaphonic_17.scl
+17-tone Triaphonic Cycle, conjunctive form on 4/3, 7/6 and 9/7                 
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         28/27             62.960904 Archytas' 1/3-tone
+  2:         14/13            128.298245 2/3-tone
+  3:         28/25            196.198479 middle second
+  4:          7/6             266.870906 septimal minor third
+  5:         28/23            340.551559
+  6:         14/11            417.507964 undecimal diminished fourth or major third
+  7:          4/3             498.044999 perfect fourth
+  8:        112/81            561.005903
+  9:         56/39            626.343244
+ 10:        112/75            694.243478
+ 11:         14/9             764.915905 septimal minor sixth
+ 12:         21/13            830.253246
+ 13:         42/25            898.153480 quasi-equal major sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:         42/23           1042.506560
+ 16:         21/11           1119.462965 undecimal major seventh
+ 17:          2/1            1200.000000 octave
+|
+turkish_17.scl
+Turkish THM folk music gamut in 53-tET
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         67.925 cents      67.924530
+  2:        113.208 cents     113.207550
+  3:        203.774 cents     203.773580
+  4:        294.340 cents     294.339620
+  5:        362.264 cents     362.264150
+  6:        407.547 cents     407.547170
+  7:        498.113 cents     498.113210
+  8:        566.038 cents     566.037740
+  9:        611.321 cents     611.320750
+ 10:        701.887 cents     701.886790
+ 11:        792.453 cents     792.452830
+ 12:        860.377 cents     860.377360
+ 13:        905.660 cents     905.660380
+ 14:        996.226 cents     996.226420
+ 15:       1064.151 cents    1064.150940
+ 16:       1109.434 cents    1109.433960
+ 17:          2/1            1200.000000 octave
+|
+turkish_bagl.scl
+
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         18/17             98.954592 Arabic lute index finger
+  2:         12/11            150.637059 3/4-tone, undecimal neutral second
+  3:          9/8             203.910002 major whole tone
+  4:         81/68            302.864594 Persian wosta
+  5:         27/22            354.547060 neutral third, Zalzal wosta of al-Farabi
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:         24/17            596.999591 1st septendecimal tritone
+  9:         16/11            648.682058 undecimal semi-diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         27/17            800.909593 septendecimal minor sixth
+ 12:         18/11            852.592059 undecimal neutral sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         32/17           1095.044590 17th subharmonic
+ 16:         64/33           1146.727057 33rd subharmonic
+ 17:          2/1            1200.000000 octave
+|
+uruk.scl
+Jon Lyle Smith's "Uruk" scale
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         21/20             84.467193 minor semitone
+  2:         15/14            119.442808 major diatonic semitone
+  3:          9/8             203.910002 major whole tone
+  4:        189/160           288.377195
+  5:        135/112           323.352810
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:          7/5             582.512193 septimal or Huygens' tritone, BP fourth
+  9:         10/7             617.487807 Euler's tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:         63/40            786.422194 narrow minor sixth
+ 12:         45/28            821.397809 septimale wide minor sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:        567/320           990.332196
+ 15:        405/224          1025.307811
+ 16:        243/128          1109.775004 Pythagorean major seventh
+ 17:          2/1            1200.000000 octave
+|
+vaisvil_diam7pluswoo.scl
+Chris Vaisvil, 7-limit diamond; in [10/3 7/2 11] marvel woo tuning
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        116.230 cents     116.230270
+  2:        200.697 cents     200.697460
+  3:        232.461 cents     232.460540
+  4:        267.512 cents     267.512340
+  5:        316.928 cents     316.927730
+  6:        383.743 cents     383.742610
+  7:        499.973 cents     499.972880
+  8:        584.440 cents     584.440070
+  9:        616.203 cents     616.203150
+ 10:        700.670 cents     700.670340
+ 11:        816.901 cents     816.900610
+ 12:        883.715 cents     883.715490
+ 13:        933.131 cents     933.130880
+ 14:        968.183 cents     968.182680
+ 15:        999.946 cents     999.945760
+ 16:       1084.413 cents    1084.412950
+ 17:       1200.643 cents    1200.643220
+|
+vries35-72.scl
+Leo de Vries 35/72 Through-Transposing-Tonality 17 tone scale
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        350.000 cents     350.000000
+  2:        383.333 cents     383.333330
+  3:        416.667 cents     416.666670
+  4:        450.000 cents     450.000000
+  5:        483.333 cents     483.333330
+  6:        516.667 cents     516.666670
+  7:        550.000 cents     550.000000
+  8:        583.333 cents     583.333330
+  9:        933.333 cents     933.333330
+ 10:        966.667 cents     966.666670
+ 11:       1000.000 cents    1000.000000
+ 12:       1033.333 cents    1033.333330
+ 13:       1066.667 cents    1066.666670
+ 14:       1100.000 cents    1100.000000
+ 15:       1133.333 cents    1133.333330
+ 16:       1166.667 cents    1166.666670
+ 17:          2/1            1200.000000 octave
+|
+wellfip17.scl
+17-note lesfip scale, 11-limit diamond target, 8.6 to 10.8 cents tolerance
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         88.531 cents      88.531330
+  2:        147.915 cents     147.915050
+  3:        205.239 cents     205.239450
+  4:        292.784 cents     292.784170
+  5:        381.108 cents     381.108370
+  6:        438.835 cents     438.834960
+  7:        497.460 cents     497.460080
+  8:        586.043 cents     586.043410
+  9:        644.669 cents     644.668540
+ 10:        702.395 cents     702.395120
+ 11:        790.719 cents     790.719320
+ 12:        878.264 cents     878.264050
+ 13:        935.588 cents     935.588450
+ 14:        994.972 cents     994.972160
+ 15:       1083.503 cents    1083.503490
+ 16:       1141.752 cents    1141.751750
+ 17:          2/1            1200.000000 octave
+|
+wilcent17.scl
+11-limit 17 tone scale by Erv Wilson
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         22/21             80.537035 undecimal minor semitone
+  2:         11/10            165.004228 4/5-tone, Ptolemy's second
+  3:          9/8             203.910002 major whole tone
+  4:          7/6             266.870906 septimal minor third
+  5:         11/9             347.407941 undecimal neutral third
+  6:          5/4             386.313714 major third
+  7:          4/3             498.044999 perfect fourth
+  8:         11/8             551.317942 undecimal semi-augmented fourth
+  9:         22/15            663.049228 undecimal diminished fifth
+ 10:          3/2             701.955001 perfect fifth
+ 11:         11/7             782.492036 undecimal augmented fifth
+ 12:         44/27            845.452940 neutral sixth
+ 13:          5/3             884.358713 major sixth, BP sixth
+ 14:          7/4             968.825906 harmonic seventh
+ 15:         11/6            1049.362941 21/4-tone, undecimal neutral seventh
+ 16:         15/8            1088.268715 classic major seventh
+ 17:          2/1            1200.000000 octave
+|
+wilson_17.scl
+Wilson's 17-tone 5-limit scale
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:        135/128            92.178716 major chroma, major limma
+  2:         10/9             182.403712 minor whole tone
+  3:          9/8             203.910002 major whole tone
+  4:       1215/1024          296.088718 wide augmented second
+  5:          5/4             386.313714 major third
+  6:         81/64            407.820003 Pythagorean major third
+  7:          4/3             498.044999 perfect fourth
+  8:         45/32            590.223716 diatonic tritone
+  9:        729/512           611.730005 Pythagorean tritone
+ 10:          3/2             701.955001 perfect fifth
+ 11:        405/256           794.133717 wide augmented fifth
+ 12:          5/3             884.358713 major sixth, BP sixth
+ 13:         27/16            905.865003 Pythagorean major sixth
+ 14:         16/9             996.089998 Pythagorean minor seventh
+ 15:         15/8            1088.268715 classic major seventh
+ 16:        243/128          1109.775004 Pythagorean major seventh
+ 17:          2/1            1200.000000 octave
+|
+zest24-persian_Eb.scl
+Version somewhat like Darius Anooshfar's persian.scl, Eb-Eb
+|
+  0:          1/1               0.000000 unison, perfect prime
+  1:         95.810 cents      95.810350
+  2:        146.086 cents     146.086180
+  3:        216.759 cents     216.758610
+  4:        287.431 cents     287.431040
+  5:        337.707 cents     337.706880
+  6:        408.379 cents     408.379310
+  7:        491.621 cents     491.620690
+  8:        541.897 cents     541.896530
+  9:        650.276 cents     650.275840
+ 10:        708.379 cents     708.379310
+ 11:        791.621 cents     791.620690
+ 12:        841.897 cents     841.896530
+ 13:        912.569 cents     912.568960
+ 14:        983.241 cents     983.241390
+ 15:       1033.517 cents    1033.517220
+ 16:       1104.190 cents    1104.189650
+ 17:          2/1            1200.000000 octave
+|

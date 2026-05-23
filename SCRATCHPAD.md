@@ -49,6 +49,16 @@
   a 0-based cross-reference from the original Pd patch. Stored and displayed
   literally; harmless but potentially confusing in the UI.
 
+## Session summary (2026-05-23)
+
+Timing delay removed from `midi.py` (hardware-confirmed clean). Scale family
+taxonomy added to `cuelist_gen.py` (19 families, `family_scales()`,
+`list_cuelists()`). SCL provenance wired into `ScaleEntry`. Cuelist library
+established (`cuelists/`, 14 pre-generated files). Notebook updated: generation
+cell rewritten with family API and commented examples; browser cell added.
+`.gitignore` created. CUELIST_PATH restored to cell 0 after accidental removal.
+Widget callback display bug remains open — see STEPS.org.
+
 ## In-progress / soon
 
 ### Cuelist generator — next capabilities

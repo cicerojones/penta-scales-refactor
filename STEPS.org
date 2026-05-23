@@ -1,0 +1,236 @@
+#+TITLE: Pd Tuning App — Session Guide
+#+DATE: 2026-05-23
+#+STARTUP: overview
+
+* Project at a Glance
+
+Python/ipywidgets notebook that sends MIDI sysex to a Yamaha Motif to change
+tuning and program. Two independent send streams (tuning, voice) controlled by
+a cue list. No audio output — purely a controller. The notebook runs on macOS
+alongside Logic Pro; Logic handles playback, this handles tuning/timbre.
+
+Source: [[file:CLAUDE.md][CLAUDE.md]] (full technical context)
+Code:   [[file:src/][src/]]   Tests: [[file:tests/][tests/]]   Cuelists: [[file:cuelists/][cuelists/]]
+
+* Current State (2026-05-23)
+
+** What works
+
+- Full sysex pipeline: 178 pentatonic scales + 5 Motif voice banks
+- Test suite: 47 tests passing (coll, catalog, cuelist, state)
+- Scale family taxonomy: 19 named families in ~cuelist_gen.SCALE_FAMILIES~
+  - ~family_scales(catalog, *families)~ — semantic scale selection
+  - ~filter_scales(catalog, contains=...)~ — fine-grained substring match
+  - ~list_cuelists(dir)~ — preview cuelist library
+- SCL provenance: ~ScaleEntry.provenance~ populated from ~resources/scl2/~ at load time
+- Cuelist library: 14 pre-generated CSVs in ~cuelists/~; hot-reload via ~state.reload()~
+- Timing delay removed from ~midi.py~ — confirmed clean on Motif hardware
+- ~.gitignore~: covers ~resources/scl2~, ~__pycache__~, ~.venv~
+
+** Known issues
+
+- [bug] Widget button callbacks may not update the display reliably
+  — see [[*Open Bug: Widget Callbacks]] for debugging notes
+- [ux] ~ScaleEntry.provenance~ is loaded but not yet surfaced in the widget display
+- [ux] Browser cell calls ~state.reload()~ unconditionally — will raise NameError
+  if run before the main widget cell (no ~try/except~ guard like the generation cell)
+
+* Reinit Procedure
+
+Run these blocks in order after opening the project. All blocks assume the
+project root as working directory.
+
+** 1. Verify Python environment
+
+#+begin_src shell
+cd ~/projects/penta-scales-refactor
+python3 -c "import mido, ipywidgets, jupyter; print('Environment OK')"
+#+end_src
+
+If that fails, the packages are not on the active Python. Install them:
+#+begin_src shell
+pip3 install mido python-rtmidi ipywidgets jupyterlab
+#+end_src
+
+Note: no project-local ~.venv~ currently exists. Dependencies are installed at
+the Homebrew Python 3.11 system level. Creating a venv is on the Triage list.
+
+** 2. Run the test suite
+
+#+begin_src shell
+cd ~/projects/penta-scales-refactor
+python3 -m pytest tests/ -q
+#+end_src
+
+Expected: ~47 passed~. Any failure before touching code indicates environment
+drift.
+
+** 3. Check MIDI ports
+
+#+begin_src shell
+cd ~/projects/penta-scales-refactor
+python3 -c "
+import sys; sys.path.insert(0, 'src')
+from midi import MidiOut
+ports = MidiOut.list_ports()
+for p in ports:
+    mark = '<<<' if 'MOTIF' in p.upper() else ''
+    print(f'  {p}  {mark}')
+"
+#+end_src
+
+Expected: ~YAMAHA MOTIF6 Port1~ (or similar) visible. If absent, check USB
+connection and that the Motif is powered on before opening JupyterLab.
+
+** 4. Start JupyterLab
+
+#+begin_src shell
+cd ~/projects/penta-scales-refactor
+jupyter lab notebook.ipynb
+#+end_src
+
+** 5. Notebook run order
+
+Cells must be run in sequence on a fresh kernel:
+
+| Cell | Name              | Must run before…              |
+|------+-------------------+-------------------------------|
+|    0 | Configuration     | everything                    |
+|    1 | Port check        | optional but confirms MIDI    |
+|    2 | Main widget       | browser cell, advance buttons |
+|    3 | Generation        | any time after cell 0         |
+|    4 | Browser           | after cell 2 (state exists)   |
+
+Do not run cell 4 (browser) before cell 2 — ~state~ will not exist.
+
+* Open Bug: Widget Callbacks
+
+** Symptom
+
+After clicking Advance Both / Adv Tuning / Adv Voice / Reset in the running
+widget, the tuning and voice name labels may not visually update. The ARM
+button appears to update correctly.
+
+** Where to look
+
+| File      | Location       | What                                      |
+|-----------+----------------+-------------------------------------------|
+| ui.py     | line 182       | ~state._on_change = refresh~ (direct attr) |
+| ui.py     | lines 191–194  | advance/reset lambdas                     |
+| state.py  | ~_notify()~    | calls ~self._on_change()~                 |
+| state.py  | ~__init__~     | ~_on_change~ default is ~lambda: None~    |
+
+The advance button lambdas (~lambda _: state.advance_both()~) rely on the
+chain: button → state method → ~_notify()~ → ~_on_change()~ → ~refresh()~.
+The hook is set by direct attribute assignment in ~build_ui~, not via the
+constructor's ~on_change~ parameter.
+
+** Most likely causes
+
+1. *Cell run order*: if the kernel is restarted and cell 2 is not re-run,
+   ~state._on_change~ reverts to ~lambda: None~. The widget may still display
+   (from the previous kernel) but callbacks do nothing.
+
+2. *Background thread*: ~AutoStepper~ calls ~state.advance_*()~ on a daemon
+   thread, which calls ~refresh()~ from a non-main thread. In some Jupyter
+   environments this silently drops display updates.
+
+3. *ipywidgets version*: behaviour differs between 7.x and 8.x. Check with
+   ~python3 -c "import ipywidgets; print(ipywidgets.__version__)"~.
+
+** Debugging steps
+
+#+begin_src python
+# Step 1: confirm the hook is wired (run in a scratch cell after cell 2)
+print(type(state._on_change))   # should NOT be <lambda>; should be 'function'
+print(state._on_change.__qualname__)  # should contain 'build_ui.<locals>.refresh'
+#+end_src
+
+#+begin_src python
+# Step 2: force a manual refresh to confirm display can update
+state._on_change()
+#+end_src
+
+#+begin_src python
+# Step 3: isolate thread issue — temporarily replace AutoStepper with a no-op
+# Comment out these two lines in build_ui() and re-run cell 2:
+#   auto_t = AutoStepper(state, interval_s=10.0, mode="tuning")
+#   auto_v = AutoStepper(state, interval_s=10.0, mode="voice")
+# If advance buttons work after this, the bug is thread-related.
+#+end_src
+
+** Likely fix
+
+Pass the callback through the constructor rather than setting it after:
+#+begin_src python
+# In the main widget cell, replace:
+state = PerformanceState(cues=cues, catalog=catalog, midi_out=midi_out)
+widget = build_ui(state, midi_out)
+
+# With a pattern where build_ui passes the callback at construction time:
+# (requires build_ui to return refresh alongside the widget, or a two-step init)
+#+end_src
+
+The cleaner fix is to have ~build_ui~ accept a partially-constructed state and
+wire ~on_change~ through the constructor. This is a one-session refactor.
+
+* Triage
+
+Items in priority order. One line each.
+
+** Bugs
+
+- [bug] Widget callback display not updating: advance/reset buttons call state but refresh hook may not be wired — see Open Bug section above
+- [bug] Browser cell crashes with NameError if run before main widget cell — add ~try/except NameError~ guard around ~state.reload()~
+
+** UX
+
+- [ux] ~ScaleEntry.provenance~ loaded but not shown in widget — add a third line to the tuning display panel in ~ui.py~
+- [ux] Generation cell print loop truncates provenance at 48 chars — fine for now, increase if descriptions feel cut off
+- [ux] ~CUELIST_PATH~ in cell 0 is cosmetically redundant with ~CUELISTS_DIR~ — consider deriving it from the browser selection
+
+** Refactors
+
+- [refactor] Wire ~on_change~ through ~PerformanceState~ constructor, not by direct ~_on_change~ attribute assignment after construction
+- [refactor] Create project-local ~.venv~ and ~requirements.txt~ per project conventions (currently using Homebrew system Python)
+
+** Features
+
+- [feature] Autostep humanize: ±N seconds jitter on interval to prevent metronomic feel
+- [feature] Autostep count-based stop: stop after N advances rather than toggling manually
+- [feature] Autostep sync-to-manual: reset timer whenever a manual advance fires
+- [feature] Surface Wilson 17/31/41 scales from ~resources/three-coll-tunings.txt~
+- [feature] Constraint pairing in generator: ~(scale_family, voice_category, weight)~ rules for musically matched pairs
+- [feature] Anchor cues: fix specific positions in a cuelist, fill remainder randomly
+
+* Session Log
+
+** 2026-05-23
+
+Session on branch ~MBAdev~. Started from: 47 tests passing, widget functional.
+
+Changes made:
+- ~midi.py~: removed ~_INTER_MSG_DELAY~ (20 ms), ~time.sleep~, ~import time~;
+  confirmed clean on Motif hardware with both tuning and voice sends
+- ~catalog.py~: added ~provenance: str = ""~ to ~ScaleEntry~; populated at
+  catalog load from ~resources/scl2/<name>.scl~ comment line (line 3);
+  fallback tries underscore→space mapping for filenames with spaces
+- ~cuelist_gen.py~: added ~SCALE_FAMILIES~ dict (19 families, 178 scales
+  covered except 12 gamelan sub-types reachable via broad ~gamelan~ family);
+  added ~family_scales(catalog, *families)~ with deduplication and validation;
+  added ~list_cuelists(dir, preview_rows=4)~ for notebook library browsing;
+  updated module docstring and example import line; added ~import os~
+- ~.gitignore~: created with ~.venv/~, ~__pycache__/~, ~resources/scl2~
+  (scl2 is a symlink to 4000+ external scale files, already committed;
+  gitignore prevents future re-acquisition)
+- ~cuelists/~: created directory; pre-generated 14 CSVs covering gamelan,
+  slendro, pelog/degung, mbira/African, Harrison, hexany/JI, surupan, world mix
+- Notebook ~cell 0~: added ~CUELISTS_DIR~; restored ~CUELIST_PATH~ pointing
+  into ~cuelists/~ (removed by mistake, causing NameError in cell 2)
+- Notebook ~cell 3~ (generation): rewrote with ~family_scales~, commented
+  examples for all major scale+voice combinations, provenance in print loop
+- Notebook ~cell 4~ (browser): new cell with ~list_cuelists()~ + commented
+  path lines for all 14 pre-generated files + ~state.reload()~
+- ~SCRATCHPAD.md~: removed resolved timing-delay audit item
+
+Open at end of session: widget callback display bug (see Triage).

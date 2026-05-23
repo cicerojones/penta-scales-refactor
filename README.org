@@ -19,3 +19,5 @@ Diagnostics
 
   The msgs[0] hex should now be f0 43 00 6b 00 00 0e 47 00 43 f7 (the open frame), not the raw tuning data. The 20ms
   inter-message delay is still in place, so the full 27-message sequence (1 open + 25 data + 1 close) takes about 0.5s.
+
+HEXANY15,PRE1:Early_Fusn

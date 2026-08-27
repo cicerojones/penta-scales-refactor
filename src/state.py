@@ -104,18 +104,22 @@ class PerformanceState:
     # ------------------------------------------------------------------ internal
 
     def _send_tuning(self) -> None:
-        if not self.armed:
-            return
         scale = self.current_tuning()
+        if not self.armed:
+            print(f"[tuning] DISARMED — pointer moved to {scale.name!r}, nothing sent")
+            return
         msgs = self._catalog.sysex_for_scale(scale.index)
         self._midi.send_sysex(msgs)
+        print(f"[tuning] sent {scale.name!r} ({len(msgs)} messages)")
 
     def _send_voice(self) -> None:
-        if not self.armed:
-            return
         voice = self.current_voice()
+        if not self.armed:
+            print(f"[voice]  DISARMED — pointer moved to {voice.bank}:{voice.name!r}, nothing sent")
+            return
         msgs = self._catalog.sysex_for_voice(voice.bank, voice.index)
         self._midi.send_sysex(msgs)
+        print(f"[voice]  sent {voice.bank}:{voice.name!r} ({len(msgs)} messages)")
 
     def _notify(self) -> None:
         self._on_change()

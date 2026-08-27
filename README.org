@@ -1,6 +1,80 @@
-Diagnostics
+* Quickstart: command line
+
+  Start here to confirm the setup works before moving to =notebook.ipynb=
+  for real interactivity (cue lists, autostep, arm/advance controls).
+
+  There's no CLI script / ~__main__~ entry point yet — =src/= is a plain
+  library, driven from a Python REPL (or the notebook). Run these from
+  the project root.
+
+** 1. Confirm the Motif port is visible
+
 #+begin_src python
-# Diagnostic: send the tuning-open framing message alone.
+  import sys; sys.path.insert(0, "src")
+  import mido
+  print(mido.get_output_names())
+  # expect to see "YAMAHA MOTIF6 PORT1" (or whatever your OS reports)
+#+end_src
+
+  If the Motif isn't listed, check the USB/DIN connection before going
+  further — nothing below will work without it.
+
+** 2. Send one tuning change
+
+#+begin_src python
+  from catalog import Catalog
+  from midi import MidiOut
+
+  catalog = Catalog("resources")
+  midi_out = MidiOut()   # prefers "YAMAHA MOTIF6 PORT1"; falls back to first port
+  print("using port:", midi_out.port_name)
+
+  scale = catalog.scale_by_name("SLENDROB3")
+  msgs = catalog.sysex_for_scale(scale.index)
+  midi_out.send_sysex(msgs)
+  print(f"sent {len(msgs)} messages for {scale.name}")
+#+end_src
+
+  Confirm on the Motif itself (display / tuning behavior changes) that
+  the send landed. =sysex_for_scale= automatically wraps the data in the
+  required open/close framing messages — see "Critical sysex detail" in
+  CLAUDE.md if you ever need to bypass the wrapper.
+
+** 3. Send one voice/program change
+
+#+begin_src python
+  voice = catalog.voice_by_name("PRE1", "AiryNYlon")
+  msgs = catalog.sysex_for_voice(voice.bank, voice.index)
+  midi_out.send_sysex(msgs)
+  print(f"sent {len(msgs)} messages for {voice.bank}:{voice.name}")
+#+end_src
+
+  Swap in any name from that bank — use ~catalog.voices("PRE1")~ to list
+  what's available if you don't have a name handy.
+
+** 4. Next: algorithmic / cue-list driven sends
+
+  Once one tuning send and one voice send both land correctly, move to
+  =notebook.ipynb= (main widget cell) for the real workflow: an arm/disarm
+  toggle, a loaded cue list (=example_cuelist.csv= to start), manual
+  advance per pointer (tuning/voice independently or together), and
+  optional autostep. The =PerformanceState= class in =src/state.py= is
+  the same object driving the widget — the REPL calls above are just the
+  =Catalog=/=MidiOut= layer underneath it, without the arm/cue-pointer
+  bookkeeping.
+
+  Cue list generation (=src/cuelist_gen.py=) for building new random /
+  cross-product / zipped cue lists from filtered scale and voice subsets
+  is exposed in the notebook's cuelist-generator cell.
+
+* Diagnostics (raw sysex, no Catalog/MidiOut wrapper)
+
+  Lower-level checks, useful if step 2/3 above doesn't produce any
+  reaction on the hardware and you want to isolate whether the framing
+  itself is reaching the Motif.
+
+#+begin_src python
+  # Diagnostic: send the tuning-open framing message alone.
   # If the Motif briefly mutes or its display flickers, the port is correct.
   open_msg = bytes([240, 67, 0, 107, 0, 0, 14, 47, 0, 67, 247])
   midi_out.send_sysex([open_msg])
@@ -9,7 +83,6 @@ Diagnostics
 
   Then, to send one complete scale with framing:
 #+begin_src python
-
   # Send SLENDROB3 tuning (framing + 25 data messages + framing close)
   scale = catalog.scale_by_name('SLENDROB3')
   msgs = catalog.sysex_for_scale(scale.index)
@@ -17,7 +90,9 @@ Diagnostics
   midi_out.send_sysex(msgs)
 #+end_src
 
-  The msgs[0] hex should now be f0 43 00 6b 00 00 0e 47 00 43 f7 (the open frame), not the raw tuning data. The 20ms
-  inter-message delay is still in place, so the full 27-message sequence (1 open + 25 data + 1 close) takes about 0.5s.
+  The msgs[0] hex should now be =f0 43 00 6b 00 00 0e 47 00 43 f7= (the
+  open frame), not the raw tuning data. The 20ms inter-message delay is
+  still in place, so the full 27-message sequence (1 open + 25 data + 1
+  close) takes about 0.5s.
 
-HEXANY15,PRE1:Early_Fusn
+  Known-good name pair for testing: =HEXANY15=, =PRE1:Early_Fusn=

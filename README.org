@@ -68,20 +68,52 @@ print(f"sent {len(msgs)} messages for {voice.bank}:{voice.name}")
   Swap in any name from that bank — use ~catalog.voices("PRE2")~ to list
   what's available if you don't have a name handy.
 
-** 4. Next: algorithmic / cue-list driven sends
+** 4. Start the notebook
 
   Once one tuning send and one voice send both land correctly, move to
-  =notebook.ipynb= (main widget cell) for the real workflow: an arm/disarm
-  toggle, a loaded cue list (=example_cuelist.csv= to start), manual
-  advance per pointer (tuning/voice independently or together), and
-  optional autostep. The =PerformanceState= class in =src/state.py= is
-  the same object driving the widget — the REPL calls above are just the
-  =Catalog=/=MidiOut= layer underneath it, without the arm/cue-pointer
-  bookkeeping.
+  =notebook.ipynb= for the real workflow: an arm/disarm toggle, a loaded
+  cue list (=cuelists/gamelan_pads_24.csv= by default — edit =CUELIST_PATH=
+  in Cell 1 to change it), manual advance per pointer (tuning/voice
+  independently or together), and optional autostep. The
+  =PerformanceState= class in =src/state.py= is the same object driving
+  the widget — the REPL calls above are just the =Catalog=/=MidiOut=
+  layer underneath it, without the arm/cue-pointer bookkeeping.
+
+  Install Jupyter and ipywidgets into your venv first if you haven't
+  (not yet pinned in =requirements.txt=):
+
+#+begin_src bash
+python3 -m pip install jupyter ipywidgets
+#+end_src
+
+  Then, from the project root, with the venv active:
+
+#+begin_src bash
+jupyter notebook
+#+end_src
+
+  This opens a browser tab to Jupyter's file browser — click
+  =notebook.ipynb=. Run the cells top to bottom with Shift-Enter:
+
+  - Cell 1 (config) — just sets paths, no output expected.
+
+  - Cell 2 (port check) — prints available MIDI ports; confirm the Motif
+    shows up.
+
+  - Cell 3 (main widget) — builds =catalog=, =state=, =midi_out=, and
+    displays the widget. Any error here points at whichever piece failed.
+
+  You do not need to call anything in =src/= by hand once this is
+  running — arm, advance, jump, and autostep are all driven from the
+  widget itself.
+
+  To shut down cleanly: close the browser tab, then =Kernel -> Shut Down=
+  from the Jupyter interface (or =Ctrl-C= twice in the terminal that's
+  running =jupyter notebook=).
 
   Cue list generation (=src/cuelist_gen.py=) for building new random /
   cross-product / zipped cue lists from filtered scale and voice subsets
-  is exposed in the notebook's cuelist-generator cell.
+  is exposed in the notebook's cuelist-generator cell (Cell 4).
 
 * Diagnostics (raw sysex, no Catalog/MidiOut wrapper)
 

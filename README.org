@@ -13,7 +13,7 @@
 import sys; sys.path.insert(0, "src")
 import mido
 print(mido.get_output_names())
-# expect to see "YAMAHA MOTIF6 PORT1" (or whatever your OS reports)
+# expect to see a port with "motif" in the name somewhere (exact casing varies by machine)
 #+end_src
 
   If the Motif isn't listed, check the USB/DIN connection before going
@@ -26,30 +26,46 @@ from catalog import Catalog
 from midi import MidiOut
 
 catalog = Catalog("resources")
-midi_out = MidiOut()   # prefers "YAMAHA MOTIF6 PORT1"; falls back to first port
+midi_out = MidiOut()   # prefers any port with "motif" in the name; falls back to first port
 print("using port:", midi_out.port_name)
 
-scale = catalog.scale_by_name("SLENDROB3")
-msgs = catalog.sysex_for_scale(scale.index)
-midi_out.send_sysex(msgs)
-print(f"sent {len(msgs)} messages for {scale.name}")
+scale1 = catalog.scale_by_name("SLENDROB3")
+scale2 = catalog.scale_by_name("HEXANY15")
 #+end_src
 
-  Confirm on the Motif itself (display / tuning behavior changes) that
-  the send landed. =sysex_for_scale= automatically wraps the data in the
-  required open/close framing messages — see "Critical sysex detail" in
-  CLAUDE.md if you ever need to bypass the wrapper.
+  The Motif often powers on in a confused tuning state, so a single send
+  can look like nothing happened even when it worked — you need to see
+  it land on something specific and known. Send scale1, then look up at
+  the Motif's display before doing anything else:
+
+#+begin_src python
+midi_out.send_sysex(catalog.sysex_for_scale(scale1.index))
+print("sent", scale1.name)
+#+end_src
+
+  Confirmed a change? Now send scale2 and look again — a second,
+  different change rules out a fluke (e.g. a coincidental match with
+  whatever confused state it powered on in):
+
+#+begin_src python
+midi_out.send_sysex(catalog.sysex_for_scale(scale2.index))
+print("sent", scale2.name)
+#+end_src
+
+  =sysex_for_scale= automatically wraps the data in the required
+  open/close framing messages — see "Critical sysex detail" in CLAUDE.md
+  if you ever need to bypass the wrapper.
 
 ** 3. Send one voice/program change
 
 #+begin_src python
-voice = catalog.voice_by_name("PRE1", "AiryNYlon")
+voice = catalog.voice_by_name("PRE2", "Airy_Nylon")
 msgs = catalog.sysex_for_voice(voice.bank, voice.index)
 midi_out.send_sysex(msgs)
 print(f"sent {len(msgs)} messages for {voice.bank}:{voice.name}")
 #+end_src
 
-  Swap in any name from that bank — use ~catalog.voices("PRE1")~ to list
+  Swap in any name from that bank — use ~catalog.voices("PRE2")~ to list
   what's available if you don't have a name handy.
 
 ** 4. Next: algorithmic / cue-list driven sends
@@ -90,7 +106,7 @@ print(f"{len(msgs)} messages  |  first: {msgs[0].hex(' ')}")
 midi_out.send_sysex(msgs)
 #+end_src
 
-  The msgs[0] hex should now be =f0 43 00 6b 00 00 0e 47 00 43 f7= (the
+  The msgs[0] hex should now be =f0 43 00 6b 00 00 0e 2f 00 43 f7= (the
   open frame), not the raw tuning data. The 20ms inter-message delay is
   still in place, so the full 27-message sequence (1 open + 25 data + 1
   close) takes about 0.5s.

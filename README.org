@@ -10,10 +10,10 @@
 ** 1. Confirm the Motif port is visible
 
 #+begin_src python
-  import sys; sys.path.insert(0, "src")
-  import mido
-  print(mido.get_output_names())
-  # expect to see "YAMAHA MOTIF6 PORT1" (or whatever your OS reports)
+import sys; sys.path.insert(0, "src")
+import mido
+print(mido.get_output_names())
+# expect to see "YAMAHA MOTIF6 PORT1" (or whatever your OS reports)
 #+end_src
 
   If the Motif isn't listed, check the USB/DIN connection before going
@@ -22,17 +22,17 @@
 ** 2. Send one tuning change
 
 #+begin_src python
-  from catalog import Catalog
-  from midi import MidiOut
+from catalog import Catalog
+from midi import MidiOut
 
-  catalog = Catalog("resources")
-  midi_out = MidiOut()   # prefers "YAMAHA MOTIF6 PORT1"; falls back to first port
-  print("using port:", midi_out.port_name)
+catalog = Catalog("resources")
+midi_out = MidiOut()   # prefers "YAMAHA MOTIF6 PORT1"; falls back to first port
+print("using port:", midi_out.port_name)
 
-  scale = catalog.scale_by_name("SLENDROB3")
-  msgs = catalog.sysex_for_scale(scale.index)
-  midi_out.send_sysex(msgs)
-  print(f"sent {len(msgs)} messages for {scale.name}")
+scale = catalog.scale_by_name("SLENDROB3")
+msgs = catalog.sysex_for_scale(scale.index)
+midi_out.send_sysex(msgs)
+print(f"sent {len(msgs)} messages for {scale.name}")
 #+end_src
 
   Confirm on the Motif itself (display / tuning behavior changes) that
@@ -43,10 +43,10 @@
 ** 3. Send one voice/program change
 
 #+begin_src python
-  voice = catalog.voice_by_name("PRE1", "AiryNYlon")
-  msgs = catalog.sysex_for_voice(voice.bank, voice.index)
-  midi_out.send_sysex(msgs)
-  print(f"sent {len(msgs)} messages for {voice.bank}:{voice.name}")
+voice = catalog.voice_by_name("PRE1", "AiryNYlon")
+msgs = catalog.sysex_for_voice(voice.bank, voice.index)
+midi_out.send_sysex(msgs)
+print(f"sent {len(msgs)} messages for {voice.bank}:{voice.name}")
 #+end_src
 
   Swap in any name from that bank — use ~catalog.voices("PRE1")~ to list
@@ -74,20 +74,20 @@
   itself is reaching the Motif.
 
 #+begin_src python
-  # Diagnostic: send the tuning-open framing message alone.
-  # If the Motif briefly mutes or its display flickers, the port is correct.
-  open_msg = bytes([240, 67, 0, 107, 0, 0, 14, 47, 0, 67, 247])
-  midi_out.send_sysex([open_msg])
-  print("sent:", open_msg.hex(' '))
+# Diagnostic: send the tuning-open framing message alone.
+# If the Motif briefly mutes or its display flickers, the port is correct.
+open_msg = bytes([240, 67, 0, 107, 0, 0, 14, 47, 0, 67, 247])
+midi_out.send_sysex([open_msg])
+print("sent:", open_msg.hex(' '))
 #+end_src
 
   Then, to send one complete scale with framing:
 #+begin_src python
-  # Send SLENDROB3 tuning (framing + 25 data messages + framing close)
-  scale = catalog.scale_by_name('SLENDROB3')
-  msgs = catalog.sysex_for_scale(scale.index)
-  print(f"{len(msgs)} messages  |  first: {msgs[0].hex(' ')}")
-  midi_out.send_sysex(msgs)
+# Send SLENDROB3 tuning (framing + 25 data messages + framing close)
+scale = catalog.scale_by_name('SLENDROB3')
+msgs = catalog.sysex_for_scale(scale.index)
+print(f"{len(msgs)} messages  |  first: {msgs[0].hex(' ')}")
+midi_out.send_sysex(msgs)
 #+end_src
 
   The msgs[0] hex should now be =f0 43 00 6b 00 00 0e 47 00 43 f7= (the

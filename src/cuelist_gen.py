@@ -43,6 +43,7 @@ category_1 reference (selected):
 from __future__ import annotations
 
 import csv
+import os
 import random
 
 from catalog import Catalog, ScaleEntry, VoiceEntry
@@ -220,8 +221,38 @@ def generate_cuelist(
 
 def write_cuelist(path: str, pairs: list[tuple[ScaleEntry, VoiceEntry]]) -> None:
     """Write pairs to a CSV file loadable by load_cuelist()."""
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     with open(path, "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["tuning", "voice"])
         for scale, voice in pairs:
             writer.writerow([scale.name, f"{voice.bank}:{voice.name}"])
+
+
+def list_cuelists(cuelists_dir: str, preview_rows: int = 4) -> None:
+    """Print a summary of every .csv file in cuelists_dir.
+
+    For each file: filename, cue count, and the first preview_rows pairs.
+    """
+    try:
+        names = sorted(f for f in os.listdir(cuelists_dir) if f.endswith(".csv"))
+    except FileNotFoundError:
+        print(f"Directory not found: {cuelists_dir!r}")
+        return
+    if not names:
+        print(f"No cuelists found in {cuelists_dir!r}")
+        return
+    for name in names:
+        path = os.path.join(cuelists_dir, name)
+        try:
+            with open(path, newline="") as f:
+                rows = list(csv.reader(f))
+            data = rows[1:]  # skip header
+            print(f"{name}  ({len(data)} cues)")
+            for tuning, voice in data[:preview_rows]:
+                print(f"    {tuning:<30} {voice}")
+            if len(data) > preview_rows:
+                print(f"    … {len(data) - preview_rows} more")
+        except Exception as e:
+            print(f"{name}: error ({e})")
+        print()

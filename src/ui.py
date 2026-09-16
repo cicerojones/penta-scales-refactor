@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import ipywidgets as w
-from IPython.display import display
 
 from autostepper import AutoStepper
 from catalog import ScaleEntry, VoiceEntry
@@ -160,6 +159,8 @@ def build_ui(state: PerformanceState, midi_out: MidiOut) -> w.Widget:
 
         scale_table.value = _scale_table(t_cur)
 
+        jump_t.max = state.cue_count - 1
+        jump_v.max = state.cue_count - 1
         jump_t.value = state.tuning_ptr
         jump_v.value = state.voice_ptr
 
